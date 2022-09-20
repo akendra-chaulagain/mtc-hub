@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/nathmbardibasedu/public_html/
+    - /bin/cp -r * $DEPLOYPATH
+
