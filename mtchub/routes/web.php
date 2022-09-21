@@ -24,9 +24,9 @@ Route::get('/mtchub', 'HomeController@index');
 
 Route::prefix('admin')->group(function(){
     
-    Route::get('/mtchub','Auth\AdminLoginController@index');
-    Route::post('/mtchub/login','Auth\AdminLoginController@login')->name('login.submit');
-    Route::get('/mtchub/change_profile','AdminController@change_profile')->name('admin.change_profile');
+    Route::get('/','Auth\AdminLoginController@index');
+    Route::post('/login','Auth\AdminLoginController@login')->name('login.submit');
+    Route::get('/change_profile','AdminController@change_profile')->name('admin.change_profile');
     Route::post('/change_profile','AdminController@update_profile')->name('admin.update_profile');
     Route::get('/logout','Auth\AdminLoginController@logout')->name('admin.logout');
 

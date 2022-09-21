@@ -156,7 +156,7 @@ if (isset($normal)) {
                         <div id="menu" class="text-left ">
                             <ul class="offcanvas_main_menu">
                                  <li>
-                                            <a class="active" href="/">Home</a>
+                                            <a class="active" href="/mtchub">Home</a>
                                         </li>
                                
                                
