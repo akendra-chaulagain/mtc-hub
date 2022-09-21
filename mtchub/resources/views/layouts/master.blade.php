@@ -90,31 +90,31 @@ if (isset($normal)) {
     <link rel="shortcut icon" href="{{ '/uploads/icons/' . $global_setting->favicon }}" type="image/png">
 
     <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="/website/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/mtchub/website/css/bootstrap.min.css">
 
     <!--====== Fontawesome css ======-->
-    <link rel="stylesheet" href="/website/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/mtchub/website/css/font-awesome.min.css">
 
     <!--====== flaticon css ======-->
-    <link rel="stylesheet" href="/website/css/flaticon.css">
+    <link rel="stylesheet" href="/mtchub/website/css/flaticon.css">
 
     <!--====== nice select css ======-->
-    <link rel="stylesheet" href="/website/css/nice-select.css">
+    <link rel="stylesheet" href="/mtchub/website/css/nice-select.css">
 
     <!--====== animate css ======-->
-    <link rel="stylesheet" href="/website/css/animate.min.css">
+    <link rel="stylesheet" href="/mtchub/website/css/animate.min.css">
 
     <!--====== Magnific Popup css ======-->
-    <link rel="stylesheet" href="/website/css/magnific-popup.css">
+    <link rel="stylesheet" href="/mtchub/website/css/magnific-popup.css">
 
     <!--====== Slick css ======-->
-    <link rel="stylesheet" href="/website/css/slick.css">
+    <link rel="stylesheet" href="/mtchub/website/css/slick.css">
 
     <!--====== Default css ======-->
-    <link rel="stylesheet" href="/website/css/default.css">
+    <link rel="stylesheet" href="/mtchub/website/css/default.css">
 
     <!--====== Style css ======-->
-    <link rel="stylesheet" href="/website/css/style.css">
+    <link rel="stylesheet" href="/mtchub/website/css/style.css">
 
 
 </head>

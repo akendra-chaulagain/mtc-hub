@@ -136,7 +136,7 @@ Route::post('/admissionforms', [AdmissionController::class, 'stores'])->name('ad
 
 
 
-Route::get('/mtchub/details/{informationslug}', [HomeController::class, 'singlePage'])->name('single_news');
+Route::get('/details/{informationslug}', [HomeController::class, 'singlePage'])->name('single_news');
 
 Route::get('/message/{informationslug}', [HomeController::class, 'single_message'])->name('single_message');
 
