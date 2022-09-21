@@ -1,29 +1,13 @@
 @php
-$global_setting = App\Models\GlobalSetting::all()->first();
 
-$menus = App\Models\Navigation::query()
-    ->where('nav_category', 'Main')
-    ->where('page_type', '!=', 'Job')
-    ->where('page_type', '!=', 'Photo Gallery')
-    ->where('page_type', '!=', 'Notice')
-    ->where('parent_page_id', 0)
-    ->where('page_status', '1')
-    ->orderBy('position', 'ASC')
-    ->get();
-if (isset($normal)) {
-    $seo = $normal;
-} elseif (isset($job)) {
-    $seo = $job;
-}
-
-
-$newsBreed = App\Models\Navigation::find($normal->parent_page_id);
-
-
-
-
-
+// $products = App\Models\Navigation::find($project_heading->parent_page_id);
+// $products_data = App\Models\Navigation::find($products->parent_page_id);
 @endphp
+
+
+
+
+
 
 
 
@@ -36,64 +20,85 @@ $newsBreed = App\Models\Navigation::find($normal->parent_page_id);
     {{ $normal->caption ?? ' ' }}
 @endpush
 @section('content')
-    <div class="page-title-area bg_cover"
-        style="background-image: url(https://images.pexels.com/photos/609768/pexels-photo-609768.jpeg?auto=compress&cs=tinysrgb&w=1600);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="page-title-content">
-                        <h3 class="title">{{ $normal->caption }}</h3>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                                @if ($normal->page_type == 'News')
-                                    <li class="breadcrumb-item"><a href="/news&events">{{ $newsBreed->caption }}</a></li>
-                                @else
-                                @endif
-                                <li class="breadcrumb-item active" aria-current="page">{{ $normal->caption }}</li>
-                            </ol>
-                        </nav>
+    @if ($normal->page_type == 'News' || $normal->page_type == 'Normal')
+        <!-- Page Title -->
+        <section class="page-title bg-dark-overlay text-center" style="background-image: url(/website/images/portfolio.jpg);">
+            <div class="container">
+                <div class="page-title__holder">
+                    <h1 class="page-title__title"> {{ $normal->caption ?? ' ' }}</h1>
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a href="/" class="breadcrumbs__url">Home</a>
+                        </li>
+
+
+                         <li class="breadcrumbs__item">
+                            <a href="/news&events" class="breadcrumbs__url">News &  Events</a>
+                        </li>
+
+
+
+
+                        <li class="breadcrumbs__item breadcrumbs__item--current">
+                            {{ $normal->caption ?? ' ' }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section> <!-- end page title -->
+
+        <!-- Inner Detail -->
+        <section class="section-wrap">
+            <div class="box-offset-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <div class="entry__article">
+                                <p>{{ $normal->short_content }}</p>
+                                <p>{{ $normal->long_content }}</p>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section> <!-- end Inner Detail -->
+    @else
+        <div class="slick-slider slick-single-image">
+            <img src="/uploads/featured_image/{{ $normal->featured_image ?? ' ' }}" class="project__featured-img"
+                alt="featured-img">
+            <img src="/uploads/icon_image/{{ $normal->icon_image ?? ' ' }}" class="project__featured-img"
+                alt="featured-img">
+
         </div>
-    </div>
 
+        <section class="section-wrap pb-0">
+            <div class="container">
+                <div class="row">
 
-
-    <section class="inner-details">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="inner-details__content">
-                        <h3>{{ $normal->caption }}</h3>
-                        <p>{!! $normal->short_content ?? ' ' !!}</p>
-
+                    <div class="col-lg-8 project__info mb-md-40">
+                        <h4>{!! $normal->short_content !!}</h4>
                         <p>{!! $normal->long_content !!}</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-7">
-                    <div class="sidebar">
-                        <div class="sidebar__single sidebar__category">
-                            <ul class="sidebar__category-list">
-                                @foreach ($menus as $menusitem)
-                                    <li class="sidebar__category-list-item"><a
-                                            href="  
-                                                    {{ route('category', $menusitem->nav_name) }}">{{ $menusitem->caption }}<i
-                                                class="fa fa-angle-right"></i></a></li>
-                                @endforeach
-                                <li class="sidebar__category-list-item"><a href="/contact">Contact<i
-                                            class="fa fa-angle-right"></i></a></li>
-
-                            </ul><!-- /.sidebar__category-list -->
-                        </div><!-- /.sidebar__single -->
-                        <div class="sidebar__single sidebar__tags">
-                            <p>specialized Trading Company working principally in the field of Export and Import and
-                                Supplying businesses.</p>
+                        <div class="gallery gallery-size-large">
+                            <figure class="gallery-item">
+                                <div class="gallery-icon landscape">
+                                    <img src="images/service-1.jpg" class="attachment-large size-large" alt="">
+                                </div>
+                            </figure>
+                            <figure class="gallery-item">
+                                <div class="gallery-icon landscape">
+                                    <img src="images/service-2.jpg" class="attachment-large size-large" alt="">
+                                </div>
+                            </figure>
                         </div>
                     </div>
-                </div><!-- /.col-lg-4 -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section>
-< @endsection
+
+                    <div class="col-lg-4 project__details">
+                        {!! $normal->project_details !!}
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    @endif
+@endsection

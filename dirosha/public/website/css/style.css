@@ -6568,3 +6568,147 @@ dd {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+.folder {
+  position: relative;
+  margin: 0 0 0 0;
+  padding: 20px;
+  max-width: 150px;
+  min-width: 150px;
+  min-height: 90px;
+  background-color: #e6e68a;
+  border-radius: 0 10px 0 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.folder:before {
+  position: absolute;
+  left: 0;
+  top: -10px;
+  height: 10px;
+  background-color: #e6e68a;
+  border-radius: 10px 10px 0 0;
+  width: 50px;
+  content: "";
+}
+
+.folder:after {
+  background-color: #ffff99;
+  width: 100%;
+  height: 80px;
+  border-radius: 10px 10px 0 0;
+  transform: skewX(10deg);
+  -webkit-transform: skewX(10deg);
+/*  animation: open 5s infinite;
+  -webkit-animation: open 5s infinite;*/
+  position: absolute;
+  bottom: 0;
+  left: -8px;
+  content: "";
+}
+
+.folder:hover.folder:after {
+  transform: skewX(20deg);
+  -webkit-transform: skewX(20deg);
+  left: -14px;
+  height: 70px;
+}
+
+.paper {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    left: 10px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 15%);
+}
+
+.paper.folder-pop {
+  top: 15px;
+  left: 10px;
+}
+
+.paper.folder-pop-middle{
+  top: 5px;
+  left: 40px;
+}
+
+.paper.folder-pop-last{
+  top: 0;
+  left: 70px;
+  height: 50px;
+}
+
+.folder:hover .paper{
+    animation: show 5s infinite;
+  -webkit-animation: show 5s infinite;
+}
+
+.folder-text{
+  font-size: 16px;
+  font-weight: 400;
+  color: #212529;
+  max-width: 75%;
+}
+
+@media (max-width: 767px){
+  .gallery-folder .col-lg-3{
+    text-align: center;
+    margin: 10px auto;
+  }
+}
+
+@media (max-width: 767px){
+  .folder{
+   
+    margin: 10px auto;
+  }
+}
+
+
+
+
+
+
+@keyframes open {
+  50% {
+    transform: skewX(20deg);
+    left: -30px;
+    height: 150px;
+  }
+}
+
+@keyframes show {
+  50% {
+    top: -40px;
+  }
+}
+
+@-webkit-keyframes open {
+  50% {
+    -webkit-transform: skewX(20deg);
+    left: -30px;
+    height: 150px;
+  }
+}
+
+@-webkit-keyframes show {
+  50% {
+    top: -40px;
+  }
+}
+/* --- prettyPhoto --- */
+/*div.pp_default .pp_nav
+{
+  margin-top: 9px;
+}
+div.pp_default .pp_close
+{
+  margin-top: 7px;
+}*/

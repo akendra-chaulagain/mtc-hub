@@ -8,28 +8,25 @@
 
 
 @section('content')
-    <div class="page-title-area bg_cover"
-        style="background-image: url(https://images.pexels.com/photos/609768/pexels-photo-609768.jpeg?auto=compress&cs=tinysrgb&w=1600);">
+     <section class="page-title bg-dark-overlay text-center" style="background-image: url(/website/images/portfolio.jpg);">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="page-title-content">
-                        <h3 class="title">Video Gallery</h3>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Video Gallery</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
+            <div class="page-title__holder">
+                <h1 class="page-title__title">Video Gallery</h1>
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item">
+                        <a href="/" class="breadcrumbs__url">Home</a>
+                    </li>
+                    <li class="breadcrumbs__item breadcrumbs__item--current">
+                        Video Gallery
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+    </section> <!-- end page title -->
 
    
 
-    <section class="gallery-folder">
+    <section class="gallery-folder" style="margin-top: 40px">
         <div class="container">
             <div class="row">
                 @foreach ($photos as $photo)

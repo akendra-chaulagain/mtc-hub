@@ -6,32 +6,29 @@
 @section('content')
 
 
-
-
-    <div class="page-title-area bg_cover"
-        style="background-image: url(https://images.pexels.com/photos/609768/pexels-photo-609768.jpeg?auto=compress&cs=tinysrgb&w=1600);">
+    <section class="page-title bg-dark-overlay text-center" style="background-image: url(/website/images/portfolio.jpg);">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="page-title-content">
-                        <h3 class="title">Image Gallery</h3>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Image Gallery</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
+            <div class="page-title__holder">
+                <h1 class="page-title__title">Image Gallery</h1>
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item">
+                        <a href="/" class="breadcrumbs__url">Home</a>
+                    </li>
+                    <li class="breadcrumbs__item breadcrumbs__item--current">
+                        Image Gallery
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+    </section> <!-- end page title -->
+
+
 
     <!--====== PAGE TITLE PART ENDS ======-->
 
     <!--====== BLOG DETAILS PART ENDS ======-->
 
-    <section class="gallery-folder">
+    <section class="gallery-folder " style="margin-top: 30px">
         <div class="container">
             <div class="row">
                 @if (isset($photos))
@@ -39,8 +36,10 @@
                         <div class="col-lg-3 col-md-4">
                             <a href="{{ route('galleryview', $photo->nav_name) }}">
                                 <div class="folder">
-                                    <div class="paper folder-pop"><img src="{{ $photo->banner_image}}" width="100%"></div>
-                                    <div class="paper folder-pop-middle"><img src="{{ $photo->banner_image }}" width="100%">
+                                    <div class="paper folder-pop"><img src="{{ $photo->banner_image }}" width="100%">
+                                    </div>
+                                    <div class="paper folder-pop-middle"><img src="{{ $photo->banner_image }}"
+                                            width="100%">
                                     </div>
                                     <div class="paper folder-pop-last"><img src="{{ $photo->banner_image }}" width="100%">
                                     </div>

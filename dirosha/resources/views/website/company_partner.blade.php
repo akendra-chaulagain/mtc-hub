@@ -24,28 +24,21 @@ if (
 @endphp
 
 
-<section class="company-logos-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5">
-                <div class="company-logos-text">
-                    <h3 class="title">{{ $section_heading->caption ?? ' ' }}</h3>
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <div class="row">
-                    @if (isset($partners))
+
+	<div class="partners bg-light text-center">
+				<div class="container">
+					<div class="row">
+                          @if (isset($partners))
                         @foreach ($partners as $partner)
-                            <div class="col-sm-4">
-                                <div class="logo-item mt-15">
-                                    <img src="{{ $partner->banner_image }}" alt="partner_image">
-                                </div>
-                            </div>
-                        @endforeach
+						<div class="col-sm-2">
+							<a href="#">
+								<img src="{{ $partner->banner_image }}" alt="">
+							</a>
+						</div>
+                         @endforeach
                     @endif
 
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+						
+					</div>
+				</div>
+			</div>

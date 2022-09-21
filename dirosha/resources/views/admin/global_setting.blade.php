@@ -46,6 +46,11 @@
                            placeholder="Site Contact Number Nepali" value="{{$global_setting->phone_ne}}">
                 </div>
                 <div class="form-group col-md-6">
+                    <label for="other">Address</label>
+                    <input type="text" id="other" name="other" class="form-control"
+                           placeholder="Address" value="{{$global_setting->other}}">
+                </div>
+                <div class="form-group col-md-6">
                     <label for="phone">Registered Address</label>
                     <input type="text" id="website_full_address" name="website_full_address" class="form-control"
                            placeholder="Address" value="{{$global_setting->website_full_address}}">
@@ -73,11 +78,7 @@
                            placeholder="LinkedIn" value="{{$global_setting->linkedin}}">
                 </div>
 
-                <div class="form-group col-md-6">
-                    <label for="other">Other Link</label>
-                    <input type="text" id="other" name="page_keyword" class="form-control"
-                           placeholder="Other Link" value="{{$global_setting->other}}">
-                </div>
+                
                 <div class="form-group col-md-6">
                     <label for="page_title">Page Title</label>
                     <input type="text" id="page_title" name="page_title" class="form-control" placeholder="Page Title"

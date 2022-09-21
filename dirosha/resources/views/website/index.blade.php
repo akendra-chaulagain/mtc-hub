@@ -8,6 +8,15 @@
     @include('website.main_slider')
     @include('website.home-services')
     @include('website.home-about_us')
+    @include('website.home-category')
+    @include('website.testomonial')
+      @include('website.company_partner')
+      @include('website.message')
+
+
+
+
+
     {{-- @include('website.home-about_us')
     @include('website.best-product')
     @include('website.testomonial')

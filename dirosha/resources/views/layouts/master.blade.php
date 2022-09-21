@@ -16,7 +16,9 @@ if (isset($normal)) {
     $seo = $job;
 }
 
-$notice = App\Models\Navigation::query()
+
+
+$footer = App\Models\Navigation::query()
     ->where('nav_category', 'Main')
     ->where('page_type', '=', 'Notice')
 
@@ -38,19 +40,44 @@ if (isset($normal)) {
 
 
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Home | Dirosa Contrade Pvt. Ltd.</title>
 
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="">
+
+
+    <!-----SEO--------->
+
+    <title> @stack('title') | {{ $seo->page_titile ?? $global_setting->page_title }}</title>
+    <meta name="title" content="{{ $seo->page_titile ?? $global_setting->page_title }}">
+    <meta name="description" content="{{ $seo->page_description ?? $global_setting->page_description }}">
+    <meta name="keywords" content="{{ $seo->page_keyword ?? $global_setting->page_keyword }}">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="1 days">
+    <meta name="author" content="{{ $global_setting->site_name ?? '' }}">
+
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ $global_setting->website_full_address ?? '' }}">
+    <meta property="og:title" content="{{ $seo->page_title ?? $global_setting->page_title }}">
+    <meta property="og:description" content="{{ $seo->page_description ?? $global_setting->page_description }}">
+    <meta property="og:image" content="{{ $seo->banner_image ?? '/uploads/icons/' . $global_setting->site_logo }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ $global_setting->website_full_address ?? '' }}">
+    <meta property="twitter:title" content="{{ $seo->page_title ?? $global_setting->page_title }}">
+    <meta property="twitter:description" content="{{ $seo->page_description ?? $global_setting->page_description }}">
+    <meta property="twitter:image"
+        content="{{ $seo->banner_image ?? '/uploads/icons/' . $global_setting->site_logo }}">
+
 
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Barlow:400,600%7COpen+Sans:400,400i,700' rel='stylesheet'>
@@ -62,7 +89,10 @@ if (isset($normal)) {
     <link rel="stylesheet" href="/website/css/style.css" />
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="images/favicon.png">
+    {{-- <link rel="shortcut icon" href="images/favicon.png"> --}}
+    <link rel="shortcut icon" href="{{ '/uploads/icons/' . $global_setting->favicon }}" type="image/png">
+
+    <link rel="stylesheet" href='https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css'>
 
 </head>
 
@@ -86,7 +116,8 @@ if (isset($normal)) {
                         <div class="nav__header">
                             <!-- Logo -->
                             <a href="index.html" class="logo-container flex-child">
-                                <img class="logo" src="images/logo.png" alt="logo">
+                                <img class="logo" src={{ '/uploads/icons/' . $global_setting->site_logo }}
+                                    alt="logo">
                             </a>
 
                             <!-- Mobile toggle -->
@@ -135,43 +166,51 @@ if (isset($normal)) {
                             </ul> <!-- end menu -->
                             <div class="nav__phone nav__phone--mobile d-lg-none">
                                 <span class="nav__phone-text">Call us:</span>
-                                <a href="tel:+9779851081958" class="nav__phone-number">+977-9851081958</a>
+                                <a href="tel:{{ $global_setting->phone }}"
+                                    class="nav__phone-number">+{{ $global_setting->phone }}</a>
                             </div>
 
                             <div class="nav__socials nav__socials--mobile d-lg-none">
                                 <div class="socials">
-                                    <a href="#" class="social social-twitter" aria-label="twitter" title="twitter"
-                                        target="_blank"><i class="ui-twitter"></i></a>
-                                    <a href="#" class="social social-facebook" aria-label="facebook"
-                                        title="facebook" target="_blank"><i class="ui-facebook"></i></a>
-                                    <a href="#" class="social social-youtube" aria-label="youtube"
-                                        title="google plus" target="_blank"><i class="ui-youtube"></i></a>
-                                    <a href="#" class="social social-instagram" aria-label="instagram"
-                                        title="instagram" target="_blank"><i class="ui-instagram"></i></a>
+                                    <a href="{{ $global_setting->twitter ?? '#' }}" class="social social-twitter"
+                                    aria-label="twitter" title="twitter" target="_blank"><i
+                                        class="ui-twitter"></i></a>
+                                <a href="{{ $global_setting->facebook ?? '#' }}" class="social social-facebook"
+                                    aria-label="facebook" title="facebook" target="_blank"><i
+                                        class="ui-facebook"></i></a>
+                                <a href="{{ $global_setting->linkedin ?? '#' }}" class="social social-youtube"
+                                    aria-label="youtube" title="google plus" target="_blank"><i
+                                        class="ui-youtube"></i></a>
+                                    {{-- <a href="#" class="social social-instagram" aria-label="instagram"
+                                        title="instagram" target="_blank"><i class="ui-instagram"></i></a> --}}
                                 </div>
                             </div>
                         </nav> <!-- end nav-wrap -->
 
                         <div class="nav__phone nav--align-right d-none d-lg-block">
                             <span class="nav__phone-text"><i class="top-bar__icon ui-phone"></i></span>
-                            <a href="tel:+9779851081958" class="nav__phone-number">+977-9851081958</a>
+                            <a href="tel:{{ $global_setting->phone }}"
+                                class="nav__phone-number">{{ $global_setting->phone }}</a>
                         </div>
                         <div class="nav__mail d-none d-lg-block">
                             <span class="nav__mail-text"><i class="top-bar__icon ui-email"></i></span>
-                            <a href="mailto:diroshacontrade@gmail.com"
-                                class="nav__mail__id">diroshacontrade@gmail.com</a>
+                            <a href="mailto:  {{ $global_setting->site_email }}" class="nav__mail__id">
+                                {{ $global_setting->site_email }}</a>
                         </div>
 
                         <div class="nav__socials d-none d-lg-block">
                             <div class="socials">
-                                <a href="#" class="social social-twitter" aria-label="twitter" title="twitter"
-                                    target="_blank"><i class="ui-twitter"></i></a>
-                                <a href="#" class="social social-facebook" aria-label="facebook"
-                                    title="facebook" target="_blank"><i class="ui-facebook"></i></a>
-                                <a href="#" class="social social-youtube" aria-label="youtube"
-                                    title="google plus" target="_blank"><i class="ui-youtube"></i></a>
-                                <a href="#" class="social social-instagram" aria-label="instagram"
-                                    title="instagram" target="_blank"><i class="ui-instagram"></i></a>
+                                <a href="{{ $global_setting->twitter ?? '#' }}" class="social social-twitter"
+                                    aria-label="twitter" title="twitter" target="_blank"><i
+                                        class="ui-twitter"></i></a>
+                                <a href="{{ $global_setting->facebook ?? '#' }}" class="social social-facebook"
+                                    aria-label="facebook" title="facebook" target="_blank"><i
+                                        class="ui-facebook"></i></a>
+                                <a href="{{ $global_setting->linkedin ?? '#' }}" class="social social-youtube"
+                                    aria-label="youtube" title="google plus" target="_blank"><i
+                                        class="ui-youtube"></i></a>
+                                {{-- <a href="#" class="social social-instagram" aria-label="instagram"
+                                    title="instagram" target="_blank"><i class="ui-instagram"></i></a> --}}
                             </div>
                         </div>
                     </div> <!-- end flex-parent -->
@@ -201,35 +240,181 @@ if (isset($normal)) {
 
 
 
+        <footer class="footer bg-dark-overlay" style="background-image: url(/website/images/1.jpg);">
+            <div class="container-fluid">
+                <div class="footer__widgets">
+                    <div class="row">
+
+                        <div class="col-lg-3 col-md-3">
+                            <div class="widget widget-about-us">
+                                <!-- Logo -->
+                                <a href="index.html" class="logo-container flex-child">
+                                    <img class="logo" src={{ '/uploads/icons/' . $global_setting->site_logo }} alt="logo">
+                                </a>
+                            </div>
+                        </div> <!-- end logo -->
+
+                        <div class="col-lg-2 col-md-3">
+                            <div class="widget widget_nav_menu">
+                                <ul>
+                                    <li> <a href="/">Home</a>
+
+                                <li> <a href="/About-us">Video Galery</a>
+
+                               
+                                <li> <a href="/news&events">News & Events</a>
+                               
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3">
+                        <div class="widget widget_nav_menu">
+                            <ul>
+                                <li> <a href="/gallery/photo-gallery">Image Gallery</a>
+
+                                <li> <a href="/gallery/video-gallery">Video Galery</a>
+
+                               
+                                <li> <a href="/contact">Contact</a>
+                            </li>
+                            </ul>
+
+                            
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-3">
+                        <div class="widget widget_nav_menu">
+                            <ul>
+                                <li><a href="#" target="_blank">  {{ $global_setting->other }}</a></li>
+                                <li><a href="tel:{{  $global_setting->phone }}">{{  $global_setting->phone }}</a></li>
+                                <li><a href="mailto:{{ $global_setting->site_email }}">{{ $global_setting->site_email }}</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-3">
+                        <div class="widget">
+                            <div class="socials">
+                                 <a href="{{ $global_setting->twitter ?? '#' }}" class="social social-twitter"
+                                    aria-label="twitter" title="twitter" target="_blank"><i
+                                        class="ui-twitter"></i></a>
+                                <a href="{{ $global_setting->facebook ?? '#' }}" class="social social-facebook"
+                                    aria-label="facebook" title="facebook" target="_blank"><i
+                                        class="ui-facebook"></i></a>
+                                <a href="{{ $global_setting->linkedin ?? '#' }}" class="social social-youtube"
+                                    aria-label="youtube" title="google plus" target="_blank"><i
+                                        class="ui-youtube"></i></a>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div> <!-- end container -->
+
+        <div class="footer__bottom">
+            <div class="container-fluid text-right text-md-center">
+                <span class="copyright">
+                    © 2022 Dirosha Contrade Pvt. Ltd. - All Rights Reserved, Developed By <a
+                        href="http://radiantnepal.com/" target="_blank">Radiant Infotech Nepal</a>
+                </span>
+            </div>
+        </div> <!-- end footer bottom -->
+    </footer>
 
 
 
 
 
 
-        <!-- jQuery Scripts -->
-        <script src="/website/js/jquery.min.js"></script>
-        <script src="/website/js/bootstrap.min.js"></script>
-        <script src="/website/js/plugins.js"></script>
-        <script src="/website/revolution/js/jquery.themepunch.tools.min.js"></script>
-        <script src="/website/revolution/js/jquery.themepunch.revolution.min.js"></script>
-        <script src="/website/js/rev-slider.js"></script>
-        <script src="/website/js/scripts.js"></script>
-
-
-        <!-- Rev Slider Offline Scripts -->
-        <script src="/website/revolution/js/extensions/revolution.extension.video.min.js"></script>
-        <script src="/website/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-        <script src="/website/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-        <script src="/website/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-        <script src="/website/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-        <script src="/website/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-        <script src="/website/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-        <script src="/website/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-        <script src="/website/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 
 
 
+    <!-- jQuery Scripts -->
+    <script src="/website/js/jquery.min.js"></script>
+    <script src="/website/js/bootstrap.min.js"></script>
+    <script src="/website/js/plugins.js"></script>
+    <script src="/website/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="/website/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="/website/js/rev-slider.js"></script>
+    <script src="/website/js/scripts.js"></script>
+
+
+    <!-- Rev Slider Offline Scripts -->
+    <script src="/website/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="/website/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="/website/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="/website/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="/website/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="/website/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="/website/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="/website/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="/website/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+
+
+
+
+
+
+    <!-- gllery js -->
+    <script src="/website/js/gallery/picturefill.min.js"></script>
+    <script src="/website/js/gallery/lightgallery.js"></script>
+    <script src="/website/js/gallery/lg-pager.js"></script>
+    <script src="/website/js/gallery/lg-autoplay.js"></script>
+    <script src="/website/js/gallery/lg-fullscreen.js"></script>
+    <script src="/website/js/gallery/lg-zoom.js"></script>
+    <script src="/website/js/gallery/lg-hash.js"></script>
+    <script src="/website/js/gallery/lg-share.js"></script>
+    <!--End gllery js -->
+
+    <script src="/website/js/scripts.js"></script>
+
+    <script>
+        lightGallery(document.getElementById('lightgallery'));
+
+        $(function() {
+            var selectedClass = "";
+            $(".filter").click(function() {
+                selectedClass = $(this).attr("data-rel");
+                $("#lightgallery").fadeTo(100, 0.1);
+                $("#lightgallery div").not("." + selectedClass).fadeOut().removeClass('animation');
+                setTimeout(function() {
+                    $("." + selectedClass).fadeIn().addClass('animation');
+                    $("#lightgallery").fadeTo(300, 1);
+                }, 300);
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    @if (Session::has('contact'))
+        <script>
+            Swal.fire(
+                'Thanks!',
+                "Form submitted sucessfully!!!",
+                'success'
+            )
+        </script>
+    @endif
 
 
 
