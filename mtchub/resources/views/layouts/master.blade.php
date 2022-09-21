@@ -179,7 +179,7 @@ if (isset($normal)) {
                                                             <li>
 
                                                                 <a
-                                                                    href="{{ route('subcategory', [$menu->nav_name, $sub->nav_name]) }}">{{ $sub->caption }}</a>
+                                                                    href="/mtchub/{{ route('subcategory', [$menu->nav_name, $sub->nav_name]) }}">{{ $sub->caption }}</a>
                                                             </li>
                                                         @endforeach
                                                     </ul>
