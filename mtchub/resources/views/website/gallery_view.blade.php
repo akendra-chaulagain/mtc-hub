@@ -1,7 +1,11 @@
+
+
 @php
 $global_setting = App\Models\GlobalSetting::all()->first();
 
 $galleryFeed = App\Models\Navigation::find($normal->parent_page_id);
+
+
 
 @endphp
 
@@ -31,8 +35,7 @@ $galleryFeed = App\Models\Navigation::find($normal->parent_page_id);
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/">Home</a></li>
-                                <li class="breadcrumb-item"><a
-                                        href="/{{ $galleryFeed->nav_name }}">{{ $galleryFeed->caption }}</a></li>
+                                <li class="breadcrumb-item"><a href="/{{ $galleryFeed->nav_name }}">{{ $galleryFeed->caption }}</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">{{ $normal->caption }}</li>
                             </ol>
                         </nav>
