@@ -22,7 +22,7 @@ Auth::routes();
 
 Route::get('/mtchub', 'HomeController@index');
 
-Route::prefix('admin')->group(function(){
+Route::prefix('/admin')->group(function(){
     
     Route::get('/','Auth\AdminLoginController@index');
     Route::post('/login','Auth\AdminLoginController@login')->name('login.submit');

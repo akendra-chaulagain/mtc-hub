@@ -167,8 +167,8 @@ if (isset($normal)) {
                                                 {{-- <a href="product-list.html">Our Products<i
                                                     class="fa fa-angle-down"></i></a> --}}
                                                 <a
-                                                    @if ($submenus->count() > 0) href="{{ route('category', $menu->nav_name) }}" @else href="  
-                                                    {{ route('category', $menu->nav_name) }}" @endif>{{ $menu->caption }}</a>
+                                                    @if ($submenus->count() > 0) href="/mtchub/{{ route('category', $menu->nav_name) }}" @else href="  
+                                                    /mtchub/{{ route('category', $menu->nav_name) }}" @endif>{{ $menu->caption }}</a>
 
 
 
