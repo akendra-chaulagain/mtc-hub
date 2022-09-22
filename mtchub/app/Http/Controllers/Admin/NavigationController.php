@@ -122,7 +122,7 @@ class NavigationController extends Controller
         $this->validate($request,[
             'nav_name' => 'required|min:3',
             'caption' => 'required',
-            'icon_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10240',
+            'icon_image' => 'mimes:jpeg,png,jpg,gif,svg|max:10240',
             'banner_image' => 'mimes:jpeg,png,jpg,gif,svg|max:10240'
             
         ]);
