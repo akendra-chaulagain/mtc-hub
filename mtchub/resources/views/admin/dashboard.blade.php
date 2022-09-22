@@ -8,7 +8,7 @@
             
             <!-- Total visitors -->
 						<div class="col-lg-4 col-md-6">
-							<a href="{{url('/admin/navigation-list/Main')}}">
+							<a href="{{url('/mtchub/admin/navigation-list/Main')}}">
 								<div class="panel panel-primary">
 									<div class="panel-heading">
 										<div class="row">
