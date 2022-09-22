@@ -91,7 +91,7 @@
                 <div id="pre_attachment" class="form-group col-md-10">
                     <label for="attachment">Previous Document</label>
                     <div>{{$navigation->attachment}}</div>
-                    <a href="/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}/deleteattachment" onclick="return confirm('Are you sure to delete')" style="color: red">Remove Document</a>
+                    <a href="/mtchub/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}/deleteattachment" onclick="return confirm('Are you sure to delete')" style="color: red">Remove Document</a>
                 </div>
 
                 <div id="attachment_div" class="form-group col-md-10">
