@@ -113,11 +113,11 @@ class ContactController extends Controller
         
         if($contact){
             Session::flash('contact', 'Thanks for submitting'); 
-            return redirect('/contact');
+            return redirect('/mtchub/contact');
         }
         else{
             Session::flash('contact_error', 'Sorry form submitted failed'); 
-            return redirect('/contact');
+            return redirect('/mtchub/contact');
         }
 
     }

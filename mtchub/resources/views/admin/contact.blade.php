@@ -1,10 +1,12 @@
 @extends('layouts.master')
+
+
+@push('title')
+    Contact
+@endpush
+
+
 @section('content')
-    
-
-
-
-
 
     <div class="page-title-area bg_cover"
         style="background-image: url(https://images.pexels.com/photos/609768/pexels-photo-609768.jpeg?auto=compress&cs=tinysrgb&w=1600);">
