@@ -31,7 +31,7 @@ class NavigationController extends Controller
             $category_id = \Request::segment(4);
             //return $category_id;
             $current_max_position = Navigation::where('parent_page_id', $request_segment)->max('position');
-            $category .= '/' . $request_segment;
+            $category .= '/mtchub/' . $request_segment;
         }
         $category_id = intval($category_id);
         //return $category_id;
@@ -53,6 +53,8 @@ class NavigationController extends Controller
             'banner_image' => 'mimes:jpeg,png,jpg,gif,svg|max:10240'
 
         ]);
+
+
 
         $data = $request->all();
         $data['nav_category'] = $nav_category;
