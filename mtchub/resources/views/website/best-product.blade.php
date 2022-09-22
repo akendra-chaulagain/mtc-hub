@@ -10,7 +10,7 @@
          <div class="row product-box-active">
              @foreach ($home_best_products as $home_productitem)
                  <div class="col-lg-3 col-md-6 col-sm-6">
-                     <a href="/our-products/{{  $home_productitem->nav_name }}">
+                     <a href="/mtchub/our-products/{{  $home_productitem->nav_name }}">
                          <div class="single-product mt-30">
                              @if ($home_productitem->banner_image)
                                  <img src="/mtchub{{ $home_productitem->banner_image }}">
@@ -27,10 +27,6 @@
 
 
      </div>
-     {{-- <div class="row justify-content-center text-center">
-         <div class="col-lg-5">
-             <a class="main-btn main-btn-2" href="item-list.html">View All</a>
-         </div>
-     </div> --}}
+   
      </div>
  </section>
