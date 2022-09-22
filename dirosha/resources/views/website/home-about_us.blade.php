@@ -13,7 +13,7 @@
 
             </div>
             <div class="col-lg-5">
-                <img src="{{ $about->banner_image }}" class="img-full-width" alt="">
+                <img src="/dirosha/{{ $about->banner_image }}" class="img-full-width" alt="">
             </div>
         </div>
     </div>
