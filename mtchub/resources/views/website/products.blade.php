@@ -77,9 +77,9 @@ $productsBreed = App\Models\Navigation::find($notice_heading->parent_page_id);
                                         <div class="single-product mt-30">
 
                                             @if ($noticesitem->banner_image)
-                                                <img src="{{ $noticesitem->banner_image }}">
+                                                <img src="/mtchub/{{ $noticesitem->banner_image }}">
                                             @else
-                                                <img src="/website/defaultproduct.jpg">
+                                                <img src="/mtchub/website/defaultproduct.jpg">
                                             @endif
 
 
