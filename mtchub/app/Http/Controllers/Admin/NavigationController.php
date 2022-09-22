@@ -31,7 +31,7 @@ class NavigationController extends Controller
             $category_id = \Request::segment(4);
             //return $category_id;
             $current_max_position = Navigation::where('parent_page_id',$request_segment)->max('position');
-            $category .= '/'.$request_segment;
+            $category .= '/mtchub/'.$request_segment;
         }
         $category_id = intval($category_id);
         //return $category_id;
@@ -96,7 +96,7 @@ class NavigationController extends Controller
         }
 
         $navigation = Navigation::create($data);
-        return redirect('/admin/navigation-list/'.$nav_category.$parent_id)->with('success','Data Added Succssfully!!');
+        return redirect('/mtchub/admin/navigation-list/'.$nav_category.$parent_id)->with('success','Data Added Succssfully!!');
 
     }
 
@@ -189,7 +189,7 @@ class NavigationController extends Controller
 
         $navigationItems = NavigationItems::all();
         NavigationItems::where('navigation_id',$id)->update(['navigation_id'=>$id]);
-        return redirect('/admin/navigation-list/'.$nav_category . $parent_id )->with('success','Data Updated Successfully!!');
+        return redirect('/mtchub/admin/navigation-list/'.$nav_category . $parent_id )->with('success','Data Updated Successfully!!');
         
 
     }
@@ -233,7 +233,7 @@ class NavigationController extends Controller
                 $job->delete();
             }            
 
-        return redirect('/admin/navigation-list/'.$nav_category.$parent_id)->with('success','Data Deleted Succssfully!!');
+        return redirect('/mtchub/admin/navigation-list/'.$nav_category.$parent_id)->with('success','Data Deleted Succssfully!!');
     }
     
     public function deleteIconImage($nav_category,$id)
@@ -340,7 +340,7 @@ class NavigationController extends Controller
          }
        }
 
-       return redirect('/admin/navigation-list/'.$data['nav_category']. $parent_id."/showList")->with('success','Media Added Successfully!!');
+       return redirect('/mtchub/admin/navigation-list/'.$data['nav_category']. $parent_id."/showList")->with('success','Media Added Successfully!!');
 
     }
 
