@@ -22,7 +22,7 @@ Auth::routes();
 
 Route::get('/mtchub', 'HomeController@index');
 
-Route::prefix('/admin')->group(function(){
+Route::prefix('/mtchub/admin')->group(function(){
     
     Route::get('/','Auth\AdminLoginController@index');
     Route::post('/login','Auth\AdminLoginController@login')->name('login.submit');
@@ -131,51 +131,51 @@ Route::prefix('/admin')->group(function(){
 
 
 // admission ceate
-Route::get('/admision', 'AdmissionController@AddAdmission');
-Route::post('/admissionforms', [AdmissionController::class, 'stores'])->name('admission_form');
+Route::get('/mtchub/admision', 'AdmissionController@AddAdmission');
+Route::post('/mtchub/admissionforms', [AdmissionController::class, 'stores'])->name('admission_form');
 
 
 
-Route::get('/details/{informationslug}', [HomeController::class, 'singlePage'])->name('single_news');
+Route::get('/mtchub/details/{informationslug}', [HomeController::class, 'singlePage'])->name('single_news');
 
-Route::get('/message/{informationslug}', [HomeController::class, 'single_message'])->name('single_message');
-
-
-
-Route::get('get_gallery_photos',[HomeController::class,'get_gallery_photos'])->name('get_gallery_photos');
-Route::get('gallery-view/{slug}',[HomeController::class,'GalleryView'])->name('galleryview');
-Route::get('inquiry',[ContactController::class,'inquiry'])->name('inquiry');
-Route::get('job-category',[HomeController::class,'allCategory'])->name('allCategory');
-
-
-Route::get('/all-jobs',[HomeController::class,'allJobs'])->name('allJobs');
-Route::get('/all-testomonial',[HomeController::class, 'AllTestomonials']);
+Route::get('/mtchub/message/{informationslug}', [HomeController::class, 'single_message'])->name('single_message');
 
 
 
+Route::get('/mtchub/get_gallery_photos',[HomeController::class,'get_gallery_photos'])->name('get_gallery_photos');
+Route::get('mtchub/gallery-view/{slug}',[HomeController::class,'GalleryView'])->name('galleryview');
+Route::get('mtchub/inquiry',[ContactController::class,'inquiry'])->name('inquiry');
+Route::get('mtchub/job-category',[HomeController::class,'allCategory'])->name('allCategory');
 
 
-
-Route::get('read-more/{slug}',[HomeController::class,'ReadMore'])->name('readmore');
-
-Route::POST('jobapply/store/{slug}',[ContactController::class,'ContactStore'])->name('storeapply');
+Route::get('/mtchub/all-jobs',[HomeController::class,'allJobs'])->name('allJobs');
+Route::get('/mtchub/all-testomonial',[HomeController::class, 'AllTestomonials']);
 
 
 
 
-Route::get('/jobdetail/{jobslug}',[HomeController::class,'singlePage'])->name('single_job');
-Route::get('/jobapply/{jobslug}',[ContactController::class,'jobApply'])->name('jobapply');
-Route::get('/contact',[ContactController::class,'Contact'])->name('contact');
+
+
+Route::get('mtchub/read-more/{slug}',[HomeController::class,'ReadMore'])->name('readmore');
+
+Route::POST('mtchub/jobapply/store/{slug}',[ContactController::class,'ContactStore'])->name('storeapply');
 
 
 
 
-Route::POST('contact/store',[ContactController::class,'ContactStore'])->name('contactstore');
+Route::get('/mtchub/jobdetail/{jobslug}',[HomeController::class,'singlePage'])->name('single_job');
+Route::get('/mtchub/jobapply/{jobslug}',[ContactController::class,'jobApply'])->name('jobapply');
+Route::get('/mtchub/contact',[ContactController::class,'Contact'])->name('contact');
 
 
 
-Route::get('/{slug}',[HomeController::class,'category'])->name('category');
+
+Route::POST('mtchub/contact/store',[ContactController::class,'ContactStore'])->name('contactstore');
 
 
 
-Route::get('/{category}/{subcategory}',[HomeController::class,'subcategory'])->name('subcategory');
+Route::get('/mtchub/{slug}',[HomeController::class,'category'])->name('category');
+
+
+
+Route::get('/mtchub/{category}/{subcategory}',[HomeController::class,'subcategory'])->name('subcategory');

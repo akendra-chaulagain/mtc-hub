@@ -156,7 +156,7 @@ if (isset($normal)) {
                         <div id="menu" class="text-left ">
                             <ul class="offcanvas_main_menu">
                                  <li>
-                                            <a class="active" href="/mtchub">Home</a>
+                                            <a class="active" href="/mtchub/">Home</a>
                                         </li>
                                
                                
@@ -167,8 +167,8 @@ if (isset($normal)) {
                                                 {{-- <a href="product-list.html">Our Products<i
                                                     class="fa fa-angle-down"></i></a> --}}
                                                 <a
-                                                    @if ($submenus->count() > 0) href="/mtchub/{{ route('category', $menu->nav_name) }}" @else href="  
-                                                    /mtchub/{{ route('category', $menu->nav_name) }}" @endif>{{ $menu->caption }}</a>
+                                                    @if ($submenus->count() > 0) href="{{ route('category', $menu->nav_name) }}" @else href="  
+                                                    {{ route('category', $menu->nav_name) }}" @endif>{{ $menu->caption }}</a>
 
 
 
@@ -179,7 +179,7 @@ if (isset($normal)) {
                                                             <li>
 
                                                                 <a
-                                                                    href="/mtchub/{{ route('subcategory', [$menu->nav_name, $sub->nav_name]) }}">{{ $sub->caption }}</a>
+                                                                    href="{{ route('subcategory', [$menu->nav_name, $sub->nav_name]) }}">{{ $sub->caption }}</a>
                                                             </li>
                                                         @endforeach
                                                     </ul>
