@@ -1,6 +1,6 @@
 @extends('admin.layout.master')
 @section('style')
-    <link rel="stylesheet" href="{{asset('assets/admin/plugins/DataTables/datatables.min.css')}}">
+    <link rel="stylesheet" href="{{asset('/mtchub/assets/admin/plugins/DataTables/datatables.min.css')}}">
 @endsection
 
 @section('content')
