@@ -94,30 +94,30 @@
 
                                         <td>
                                             @if($navigation->page_type === 'Group')
-                                                <a href="/admin/navigation-list/{{$nav_category}}/{{$navigation->id}}"
+                                                <a href="/mtchub/admin/navigation-list/{{$nav_category}}/{{$navigation->id}}"
                                                    title="Group">
                                                     <button class="btn btn-primary">Open</button>
                                                 </a>
                                             @elseif($navigation->page_type == 'Photo Gallery' || $navigation->page_type == 'Slider' || $navigation->page_type == 'Audio Gallery')
-                                                <a href="/admin/navigation-list/{{$nav_category}}/{{$navigation->id}}/showList"
+                                                <a href="/mtchub/admin/navigation-list/{{$nav_category}}/{{$navigation->id}}/showList"
                                                    title="Add Photos" class="btn-add">
                                                     <button class="btn btn-primary">View</button>
                                                 </a>
 
                                             @elseif($navigation->page_type === 'Video Gallery')
-                                                <a href="/admin/navigation-list/{{$nav_category}}/{{$navigation->id}}/vlink"
+                                                <a href="/mtchub/admin/navigation-list/{{$nav_category}}/{{$navigation->id}}/vlink"
                                                    title="Add Videos" class="btn-add">
                                                     <button class="btn btn-primary">View Videos</button>
                                                 </a>
                                             @endif
-                                            <a href="/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}/edit"
+                                            <a href="/mtchub/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}/edit"
                                                title="edit" class="edit_btn">
                                                 <button class="btn btn-warning">Edit</button>
                                             </a>
 
                                             @if(count($navigation->childs) <= 0)
                                                 @if($navigation->nav_status == 0)
-                                                    <a href="/admin/navigation-list/{{$nav_category}}/{{$navigation->id}}/delete"
+                                                    <a href="/mtchub/admin/navigation-list/{{$nav_category}}/{{$navigation->id}}/delete"
                                                        title="delete" class="delete_btn"
                                                        onclick="return confirm('Are you sure to delete ?');">
                                                         <button class="btn btn-danger">Delete</button>
@@ -125,7 +125,7 @@
                                                 @endif
                                             @endif
                                             @if($navigation->parent_page_id == 500000)
-                                                <a href="/admin/{{$navigation->id}}/comment_list">
+                                                <a href="/mtchub/admin/{{$navigation->id}}/comment_list">
                                                     <button class="btn btn-primary">Comments</button>
                                                 </a>
                                             @endif
@@ -145,7 +145,7 @@
 
 @section('scripts')
 
-    <script src="{{asset('assets/admin/plugins/DataTables/datatables.min.js')}}"></script>
+    <script src="{{asset('/mtchub/assets/admin/plugins/DataTables/datatables.min.js')}}"></script>
     <script>
         $(document).ready(function () {
             $('#datatable').DataTable();
@@ -178,7 +178,7 @@
         $('.page_status').on('click', function () {
             var csrf = $('meta[name="csrf-token"]').attr('content');
             var id = $(this).attr("data-id");
-            var url = "{{url('admin/navigation-list')}}" + '/' + id;
+            var url = "{{url('/mtchub/admin/navigation-list')}}" + '/' + id;
 
             if ($(this).prop('checked') == true) {
                 page_status = 1;

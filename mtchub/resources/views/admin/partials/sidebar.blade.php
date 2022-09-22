@@ -28,13 +28,13 @@
                         href="{{url('/mtchub/admin/global-setting')}}"><i class="fa fa-cog"></i> <span>Global Setup</span></a>
             </li>
             <!--------customized by MD------------>
-             <li class="{{Request::is('/mtchub/admin/job-list')?'active':''}}  treeview"><a
+             {{-- <li class="{{Request::is('/mtchub/admin/job-list')?'active':''}}  treeview"><a
                         href="{{url('/admin/job-list')}}"><i class="fa fa-cog"></i> <span>JOBS</span></a>
-            </li>
+            </li> --}}
             <!----------end------------>
                <!--------customized by MD------------>
              <li class="{{Request::is('/mtchub/mtchub/admin/applied-job-list')?'active':''}}  treeview"><a
-                        href="{{url('/mtchub/admin/applied-job-list')}}"><i class="fa fa-cog"></i> <span>Applied Job</span></a>
+                        href="{{url('/mtchub/admin/applied-job-list')}}"><i class="fa fa-cog"></i> <span>Message</span></a>
             </li>
             <!----------end------------>
         </ul>
