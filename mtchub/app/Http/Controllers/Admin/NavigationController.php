@@ -38,7 +38,7 @@ class NavigationController extends Controller
         $next_position = $current_max_position + 1;
         $categories = Navigation::where('page_type','group')->where('nav_category', $category)->get();
         // return $categories;
-        return view('admin.navigation.navigation_create',compact('category','next_position','categories','main_home','category_id'));
+        return view('/mtchub/admin.navigation.navigation_create',compact('category','next_position','categories','main_home','category_id'));
     }
 
     
@@ -189,7 +189,7 @@ class NavigationController extends Controller
 
         $navigationItems = NavigationItems::all();
         NavigationItems::where('navigation_id',$id)->update(['navigation_id'=>$id]);
-        return redirect('/admin/navigation-list/'.$nav_category . $parent_id )->with('success','Data Updated Successfully!!');
+        return redirect('/mtchub/admin/navigation-list/'.$nav_category . $parent_id )->with('success','Data Updated Successfully!!');
         
 
     }
@@ -233,7 +233,7 @@ class NavigationController extends Controller
                 $job->delete();
             }            
 
-        return redirect('admin/navigation-list/'.$nav_category.$parent_id)->with('success','Data Deleted Succssfully!!');
+        return redirect('/mtchub/admin/navigation-list/'.$nav_category.$parent_id)->with('success','Data Deleted Succssfully!!');
     }
     
     public function deleteIconImage($nav_category,$id)
@@ -340,7 +340,7 @@ class NavigationController extends Controller
          }
        }
 
-       return redirect('admin/navigation-list/'.$data['nav_category']. $parent_id."/showList")->with('success','Media Added Successfully!!');
+       return redirect('/mtchub/admin/navigation-list/'.$data['nav_category']. $parent_id."/showList")->with('success','Media Added Successfully!!');
 
     }
 
@@ -355,7 +355,7 @@ class NavigationController extends Controller
 
        if($request->hasFile('file')){
         if(file_exists(public_path('uploads/photo_gallery').'/'.$media->file)){
-            unlink('uploads/photo_gallery/'.$media->file);
+            unlink('/uploads/photo_gallery/'.$media->file);
 
         }
         
