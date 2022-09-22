@@ -154,7 +154,7 @@
 
     <script>
         $('.add').click(function () {
-            var url = '<?=url()->full();?>' + '/create';
+            var url = '<?=url()->full();?>' + '/mtchub/create';
             window.location = url;
         });
     </script>
