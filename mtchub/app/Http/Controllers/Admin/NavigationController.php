@@ -96,7 +96,7 @@ class NavigationController extends Controller
         }
 
         $navigation = Navigation::create($data);
-        return redirect('/mtchub/admin/navigation-list/'.$nav_category.$parent_id)->with('success','Data Added Succssfully!!');
+        return redirect('/admin/navigation-list/'.$nav_category.$parent_id)->with('success','Data Added Succssfully!!');
 
     }
 
@@ -189,7 +189,7 @@ class NavigationController extends Controller
 
         $navigationItems = NavigationItems::all();
         NavigationItems::where('navigation_id',$id)->update(['navigation_id'=>$id]);
-        return redirect('/mtchub/admin/navigation-list/'.$nav_category . $parent_id )->with('success','Data Updated Successfully!!');
+        return redirect('/admin/navigation-list/'.$nav_category . $parent_id )->with('success','Data Updated Successfully!!');
         
 
     }
@@ -233,7 +233,7 @@ class NavigationController extends Controller
                 $job->delete();
             }            
 
-        return redirect('/mtchub/admin/navigation-list/'.$nav_category.$parent_id)->with('success','Data Deleted Succssfully!!');
+        return redirect('/admin/navigation-list/'.$nav_category.$parent_id)->with('success','Data Deleted Succssfully!!');
     }
     
     public function deleteIconImage($nav_category,$id)
@@ -340,7 +340,7 @@ class NavigationController extends Controller
          }
        }
 
-       return redirect('/mtchub/admin/navigation-list/'.$data['nav_category']. $parent_id."/showList")->with('success','Media Added Successfully!!');
+       return redirect('/admin/navigation-list/'.$data['nav_category']. $parent_id."/showList")->with('success','Media Added Successfully!!');
 
     }
 
