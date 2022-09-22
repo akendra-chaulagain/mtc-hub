@@ -13,9 +13,9 @@
                      <a href="/our-products/{{  $home_productitem->nav_name }}">
                          <div class="single-product mt-30">
                              @if ($home_productitem->banner_image)
-                                 <img src="{{ $home_productitem->banner_image }}">
+                                 <img src="/mtchub{{ $home_productitem->banner_image }}">
                              @else
-                                 <img src="/website/defaultproduct.jpg">
+                                 <img src="/mtchub/website/defaultproduct.jpg">
                              @endif
                              <h4 class="title">{{ $home_productitem->caption }}</h4>
                          </div>
