@@ -39,11 +39,11 @@ $productsBreed = App\Models\Navigation::find($notice_heading->parent_page_id);
                         <h3 class="title">{{ $notice_heading->caption ?? ' ' }}</h3>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/mtchub/">Home</a></li>
 
                                 
                                 <li class="breadcrumb-item">
-                                    <a href="/{{ $products->nav_name ?? ' ' }}">{{ $products->caption ?? ' ' }}</a>
+                                    <a href="/mtchub/{{ $products->nav_name ?? ' ' }}">{{ $products->caption ?? ' ' }}</a>
                                 
                                 </li>
                                 <li class="breadcrumb-item active" aria-current="page">
@@ -73,13 +73,13 @@ $productsBreed = App\Models\Navigation::find($notice_heading->parent_page_id);
                         <div class="row product-box-inner">
                             @foreach ($notices as $noticesitem)
                                 <div class="col-lg-3 col-md-6 col-sm-6">
-                                    <a href="{{ $noticesitem->nav_name }}">
+                                    <a href="/mtchub/{{ $noticesitem->nav_name }}">
                                         <div class="single-product mt-30">
 
                                             @if ($noticesitem->banner_image)
                                                 <img src="{{ $noticesitem->banner_image }}">
                                             @else
-                                                <img src="/website/defaultproduct.jpg">
+                                                <img src="/mtchub/website/defaultproduct.jpg">
                                             @endif
 
 
@@ -101,7 +101,7 @@ $productsBreed = App\Models\Navigation::find($notice_heading->parent_page_id);
                             <ul class="sidebar__category-list">
                                 @foreach ($home_best_products as $home_best_product)
                                     <li class="sidebar__category-list-item"><a
-                                            href="{{ $home_best_product->nav_name }}">{{ $home_best_product->caption ?? ' ' }}<i
+                                            href="/mtchub/{{ $home_best_product->nav_name }}">{{ $home_best_product->caption ?? ' ' }}<i
                                                 class="fa fa-angle-right"></i></a></li>
                                 @endforeach
 
