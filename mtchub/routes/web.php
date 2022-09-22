@@ -156,9 +156,9 @@ Route::get('/mtchub/all-testomonial',[HomeController::class, 'AllTestomonials'])
 
 
 
-Route::get('mtchub/read-more/{slug}',[HomeController::class,'ReadMore'])->name('readmore');
+Route::get('/mtchub/read-more/{slug}',[HomeController::class,'ReadMore'])->name('readmore');
 
-Route::POST('mtchub/jobapply/store/{slug}',[ContactController::class,'ContactStore'])->name('storeapply');
+Route::POST('/mtchub/jobapply/store/{slug}',[ContactController::class,'ContactStore'])->name('storeapply');
 
 
 
@@ -170,7 +170,7 @@ Route::get('/mtchub/contact',[ContactController::class,'Contact'])->name('contac
 
 
 
-Route::POST('mtchub/contact/store',[ContactController::class,'ContactStore'])->name('contactstore');
+Route::POST('/mtchub/contact/store',[ContactController::class,'ContactStore'])->name('contactstore');
 
 
 
