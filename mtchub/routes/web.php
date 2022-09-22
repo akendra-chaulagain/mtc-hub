@@ -20,7 +20,7 @@ Auth::routes();
 
 // Route::get('/mtchub', 'HomeController@index');
 
-Route::get('/mtchub', 'HomeController@index');
+Route::get('/mtchub/', 'HomeController@index');
 
 Route::prefix('/mtchub/admin')->group(function(){
     
