@@ -215,7 +215,7 @@ if (isset($normal)) {
                     <div class="col-lg-12">
                         <div class="header-top">
                             <div class="header-logo">
-                                <a href="index.html"><img src="{{ '/mtchub/uploads/icons/' . $global_setting->site_logo }}"
+                                <a href="/mtchub"><img src="{{ '/mtchub/uploads/icons/' . $global_setting->site_logo }}"
                                         alt="logo"></a>
                             </div>
                             <ul>
@@ -295,7 +295,7 @@ if (isset($normal)) {
                                 </li>
                                     </ul>
                                     <div class="header-logo d-lg-none d-block">
-                                        <a href="index.html"><img
+                                        <a href="/mtchub"><img
                                                 src="{{ '/mtchub/uploads/icons/' . $global_setting->site_logo }}"></a>
                                     </div>
                                 </div>
@@ -337,7 +337,7 @@ if (isset($normal)) {
                 <div class="col-lg-4 col-md-6 col-sm-8">
                     <div class="footer-about mt-30">
                         <div class="logo">
-                            <a href="#"><img src="{{ '/mtchub/uploads/icons/' . $global_setting->site_logo_nepali }}"
+                            <a href="/mtchub"><img src="{{ '/mtchub/uploads/icons/' . $global_setting->site_logo_nepali }}"
                                     alt="logo"></a>
                         </div>
                         <p>{{ $global_setting->page_description }}</p>
