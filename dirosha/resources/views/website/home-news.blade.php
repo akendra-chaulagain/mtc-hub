@@ -13,9 +13,9 @@
                       <div class="news-item mt-30">
                           <div class="news-thumb">
                               @if ($home_newsitem->banner_image)
-                                  <img src="{{ $home_newsitem->banner_image }}" alt="news">
+                                  <img src="/dirosha/{{ $home_newsitem->banner_image }}" alt="news">
                               @else
-                                  <img src="/website/news-1.jpg" alt="news">
+                                  <img src="/dirosha/website/news-1.jpg" alt="news">
                               @endif
 
                           </div>

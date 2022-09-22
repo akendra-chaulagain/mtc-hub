@@ -28,12 +28,12 @@
                     <h1 class="page-title__title"> {{ $normal->caption ?? ' ' }}</h1>
                     <ul class="breadcrumbs">
                         <li class="breadcrumbs__item">
-                            <a href="/" class="breadcrumbs__url">Home</a>
+                            <a href="/dirosha/" class="breadcrumbs__url">Home</a>
                         </li>
 
 
                          <li class="breadcrumbs__item">
-                            <a href="/news&events" class="breadcrumbs__url">News &  Events</a>
+                            <a href="/dirosha/news&events" class="breadcrumbs__url">News &  Events</a>
                         </li>
 
 
@@ -65,9 +65,9 @@
         </section> <!-- end Inner Detail -->
     @else
         <div class="slick-slider slick-single-image">
-            <img src="/uploads/featured_image/{{ $normal->featured_image ?? ' ' }}" class="project__featured-img"
+            <img src="/dirosha/uploads/featured_image/{{ $normal->featured_image ?? ' ' }}" class="project__featured-img"
                 alt="featured-img">
-            <img src="/uploads/icon_image/{{ $normal->icon_image ?? ' ' }}" class="project__featured-img"
+            <img src="/dirosha/uploads/icon_image/{{ $normal->icon_image ?? ' ' }}" class="project__featured-img"
                 alt="featured-img">
 
         </div>
@@ -82,12 +82,12 @@
                         <div class="gallery gallery-size-large">
                             <figure class="gallery-item">
                                 <div class="gallery-icon landscape">
-                                    <img src="images/service-1.jpg" class="attachment-large size-large" alt="">
+                                    <img src="/dirosha/images/service-1.jpg" class="attachment-large size-large" alt="">
                                 </div>
                             </figure>
                             <figure class="gallery-item">
                                 <div class="gallery-icon landscape">
-                                    <img src="images/service-2.jpg" class="attachment-large size-large" alt="">
+                                    <img src="/dirosha/images/service-2.jpg" class="attachment-large size-large" alt="">
                                 </div>
                             </figure>
                         </div>
