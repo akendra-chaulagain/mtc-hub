@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="{{asset('/mtchub/assets/admin/dist/css/AdminLTE.min.css')}}">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="{{asset('/assets/admin/dist/css/skins/_all-skins.min.css')}}">
+  <link rel="stylesheet" href="{{asset('/mtchub/assets/admin/dist/css/skins/_all-skins.min.css')}}">
   <!-- iCheck -->
   <link rel="stylesheet" href="{{asset('/mtchub/assets/admin/plugins/iCheck/flat/blue.css')}}">
   
