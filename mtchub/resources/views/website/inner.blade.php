@@ -47,7 +47,7 @@ $newsBreed = App\Models\Navigation::find($normal->parent_page_id);
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/">Home</a></li>
                                 @if ($normal->page_type == 'News')
-                                    <li class="breadcrumb-item"><a href="/news&events">{{ $newsBreed->caption }}</a></li>
+                                    <li class="breadcrumb-item"><a href="/mtchub/news&events">{{ $newsBreed->caption }}</a></li>
                                 @else
                                 @endif
                                 <li class="breadcrumb-item active" aria-current="page">{{ $normal->caption }}</li>
