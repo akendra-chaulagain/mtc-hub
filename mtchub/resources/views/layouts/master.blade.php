@@ -477,6 +477,19 @@ if (isset($normal)) {
 
 
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    @if (Session::has('contact'))
+        <script>
+            Swal.fire(
+                'Thanks!',
+                "Form submitted sucessfully!!!",
+                'success'
+            )
+        </script>
+    @endif
+
 
 
 
