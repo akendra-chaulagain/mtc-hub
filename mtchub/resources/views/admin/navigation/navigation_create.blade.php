@@ -147,6 +147,9 @@
                         <select class="form-control" name="parent_page_id" required>
                             <option value="0">----none-----</option>
                             @foreach($categories as $c)
+
+
+                          
                             <option value="{{$c->id}}">{{$c->nav_name}}</option>
                              @endforeach             
                         </select>   
