@@ -82,12 +82,12 @@ if (isset($normal)) {
     <meta property="twitter:title" content="{{ $seo->page_title ?? $global_setting->page_title }}">
     <meta property="twitter:description" content="{{ $seo->page_description ?? $global_setting->page_description }}">
     <meta property="twitter:image"
-        content="{{ $seo->banner_image ?? '/uploads/icons/' . $global_setting->site_logo }}">
+        content="{{ $seo->banner_image ?? '/mtchub/uploads/icons/' . $global_setting->site_logo }}">
 
     
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="{{ '/uploads/icons/' . $global_setting->favicon }}" type="image/png">
+    <link rel="shortcut icon" href="{{ '/mtchub/uploads/icons/' . $global_setting->favicon }}" type="image/png">
 
     <!--====== Bootstrap css ======-->
     <link rel="stylesheet" href="/mtchub/website/css/bootstrap.min.css">
@@ -215,7 +215,7 @@ if (isset($normal)) {
                     <div class="col-lg-12">
                         <div class="header-top">
                             <div class="header-logo">
-                                <a href="index.html"><img src="{{ '/uploads/icons/' . $global_setting->site_logo }}"
+                                <a href="index.html"><img src="{{ '/mtchub/uploads/icons/' . $global_setting->site_logo }}"
                                         alt="logo"></a>
                             </div>
                             <ul>
@@ -296,7 +296,7 @@ if (isset($normal)) {
                                     </ul>
                                     <div class="header-logo d-lg-none d-block">
                                         <a href="index.html"><img
-                                                src="{{ '/uploads/icons/' . $global_setting->site_logo }}"></a>
+                                                src="{{ '/mtchub/uploads/icons/' . $global_setting->site_logo }}"></a>
                                     </div>
                                 </div>
                             </div>
@@ -337,7 +337,7 @@ if (isset($normal)) {
                 <div class="col-lg-4 col-md-6 col-sm-8">
                     <div class="footer-about mt-30">
                         <div class="logo">
-                            <a href="#"><img src="{{ '/uploads/icons/' . $global_setting->site_logo_nepali }}"
+                            <a href="#"><img src="{{ '/mtchub/uploads/icons/' . $global_setting->site_logo_nepali }}"
                                     alt="logo"></a>
                         </div>
                         <p>{{ $global_setting->page_description }}</p>

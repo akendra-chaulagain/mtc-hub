@@ -4,7 +4,7 @@
     <section class="banner-slide banner-slide-2">
   @foreach ($sliders as $slider)
 
-        <div class="banner-area bg_cover d-flex align-items-center" style="background-image: url({{ $slider->banner_image }});">
+        <div class="banner-area bg_cover d-flex align-items-center" style="background-image: url(/mtchub/{{ $slider->banner_image }});">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-9">
