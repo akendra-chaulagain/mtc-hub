@@ -13,9 +13,9 @@
                      <div class="testimonial-item text-center">
                          <p>{!! $testimonialitem->short_content !!}</p>
                          <h4 class="title">{{ $testimonialitem->caption }}</h4>
-                         <img src="{{ $testimonialitem->banner_image }}" alt="testimonial">
+                         <img src="/mtchub/{{ $testimonialitem->banner_image }}" alt="testimonial">
                         <div class="icon">
-                            <img src="/website/images/quote-icon.png" alt="">
+                            <img src="/mtchub/website/images/quote-icon.png" alt="">
                         </div>
                      </div>
                  </div>
@@ -25,6 +25,6 @@
          </div>
      </div>
      <div class="testimonial-pattern">
-         <img src="assets/images/testimonial-pattern.png" alt="">
+         <img src="/mtchub/website/assets/images/testimonial-pattern.png" alt="">
      </div>
  </section>
