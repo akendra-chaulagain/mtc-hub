@@ -45,7 +45,7 @@
         </div>
         <!-- form start -->
         
-        <form method="post" action="/admin/navigation-list/{{$category}}"  enctype="multipart/form-data">
+        <form method="post" action="/mtchub/admin/navigation-list/{{$category}}"  enctype="multipart/form-data">
             {{csrf_field()}}
             <div class="col-md-9" style="padding-top: 10px;">
                 <div class="form-group col-md-10">

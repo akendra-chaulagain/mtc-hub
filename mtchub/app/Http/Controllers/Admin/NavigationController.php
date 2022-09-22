@@ -96,7 +96,7 @@ class NavigationController extends Controller
         }
 
         $navigation = Navigation::create($data);
-        return redirect('admin/navigation-list/'.$nav_category.$parent_id)->with('success','Data Added Succssfully!!');
+        return redirect('/mtchub/admin/navigation-list/'.$nav_category.$parent_id)->with('success','Data Added Succssfully!!');
 
     }
 
