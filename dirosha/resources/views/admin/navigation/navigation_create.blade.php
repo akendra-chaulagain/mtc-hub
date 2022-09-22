@@ -49,7 +49,7 @@
             </div>
             <!-- form start -->
 
-            <form method="post" action="/admin/navigation-list/{{ $category }}" enctype="multipart/form-data">
+            <form method="post" action="/mtchub/admin/navigation-list/{{ $category }}" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="col-md-9" style="padding-top: 10px;">
                     <div class="form-group col-md-10">
@@ -551,12 +551,12 @@
             enterMode: CKEDITOR.ENTER_BR,
             filebrowserWindowWidth: '400',
             filebrowserWindowHeight: '300',
-            filebrowserBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html') }}',
-            filebrowserImageBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html?type=Images') }}',
-            filebrowserFlashBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html?type=Flash') }}',
-            filebrowserUploadUrl: '{{ asset('assetsckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}',
-            filebrowserImageUploadUrl: '{{ asset('assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}',
-            filebrowserFlashUploadUrl: '{{ asset('assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}',
+            filebrowserBrowseUrl: '{{ asset('/mtchub/assets/ckfinder/ckfinder.html') }}',
+            filebrowserImageBrowseUrl: '{{ asset('/mtchub/assets/ckfinder/ckfinder.html?type=Images') }}',
+            filebrowserFlashBrowseUrl: '{{ asset('/mtchub/assets/ckfinder/ckfinder.html?type=Flash') }}',
+            filebrowserUploadUrl: '{{ asset('/mtchub/assetsckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}',
+            filebrowserImageUploadUrl: '{{ asset('/mtchub/assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}',
+            filebrowserFlashUploadUrl: '{{ asset('/mtchub/assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}',
 
         });
 
@@ -623,12 +623,12 @@
             enterMode: CKEDITOR.ENTER_BR,
             filebrowserWindowWidth: '400',
             filebrowserWindowHeight: '300',
-            filebrowserBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html') }}',
-            filebrowserImageBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html?type=Images') }}',
-            filebrowserFlashBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html?type=Flash') }}',
-            filebrowserUploadUrl: '{{ asset('assetsckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}',
-            filebrowserImageUploadUrl: '{{ asset('assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}',
-            filebrowserFlashUploadUrl: '{{ asset('assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}',
+            filebrowserBrowseUrl: '{{ asset('/mtchub/assets/ckfinder/ckfinder.html') }}',
+            filebrowserImageBrowseUrl: '{{ asset('/mtchub/assets/ckfinder/ckfinder.html?type=Images') }}',
+            filebrowserFlashBrowseUrl: '{{ asset('/mtchub/assets/ckfinder/ckfinder.html?type=Flash') }}',
+            filebrowserUploadUrl: '{{ asset('/mtchub/assetsckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}',
+            filebrowserImageUploadUrl: '{{ asset('/mtchub/assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}',
+            filebrowserFlashUploadUrl: '{{ asset('/mtchub/assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}',
 
         });
     </script>
@@ -699,12 +699,12 @@
             enterMode: CKEDITOR.ENTER_BR,
             filebrowserWindowWidth: '400',
             filebrowserWindowHeight: '300',
-            filebrowserBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html') }}',
-            filebrowserImageBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html?type=Images') }}',
-            filebrowserFlashBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html?type=Flash') }}',
-            filebrowserUploadUrl: '{{ asset('assetsckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}',
-            filebrowserImageUploadUrl: '{{ asset('assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}',
-            filebrowserFlashUploadUrl: '{{ asset('assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}',
+            filebrowserBrowseUrl: '{{ asset('/mtchub/assets/ckfinder/ckfinder.html') }}',
+            filebrowserImageBrowseUrl: '{{ asset('/mtchub/assets/ckfinder/ckfinder.html?type=Images') }}',
+            filebrowserFlashBrowseUrl: '{{ asset('/mtchub/assets/ckfinder/ckfinder.html?type=Flash') }}',
+            filebrowserUploadUrl: '{{ asset('/mtchub/assetsckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}',
+            filebrowserImageUploadUrl: '{{ asset('/mtchub/assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}',
+            filebrowserFlashUploadUrl: '{{ asset('/mtchub/assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}',
 
         });
 
@@ -771,12 +771,12 @@
             enterMode: CKEDITOR.ENTER_BR,
             filebrowserWindowWidth: '400',
             filebrowserWindowHeight: '300',
-            filebrowserBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html') }}',
-            filebrowserImageBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html?type=Images') }}',
-            filebrowserFlashBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html?type=Flash') }}',
-            filebrowserUploadUrl: '{{ asset('assetsckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}',
-            filebrowserImageUploadUrl: '{{ asset('assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}',
-            filebrowserFlashUploadUrl: '{{ asset('assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}',
+            filebrowserBrowseUrl: '{{ asset('/mtchub/assets/ckfinder/ckfinder.html') }}',
+            filebrowserImageBrowseUrl: '{{ asset('/mtchub/assets/ckfinder/ckfinder.html?type=Images') }}',
+            filebrowserFlashBrowseUrl: '{{ asset('/mtchub/assets/ckfinder/ckfinder.html?type=Flash') }}',
+            filebrowserUploadUrl: '{{ asset('/mtchub/assetsckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}',
+            filebrowserImageUploadUrl: '{{ asset('/mtchub/assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}',
+            filebrowserFlashUploadUrl: '{{ asset('/mtchub/assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}',
 
         });
     </script>
@@ -786,17 +786,17 @@
         function pageType(val) {
             if (val == "Job") {
                 @if ($category_id == 0)
-                    window.location.href = "/admin/job/{{ $main_home }}/create";
+                    window.location.href = "/mtchub/admin/job/{{ $main_home }}/create";
                 @elseif ($category_id != 0)
-                    window.location.href = "/admin/job/{{ $main_home }}/{{ $category_id }}/create";
+                    window.location.href = "/mtchub/admin/job/{{ $main_home }}/{{ $category_id }}/create";
                 @endif
             }
         }
         if ($("#page_type").val() == "Job") {
             @if ($category_id == 0)
-                window.location.href = "/admin/job/{{ $main_home }}/create";
+                window.location.href = "/mtchub/admin/job/{{ $main_home }}/create";
             @elseif ($category_id != 0)
-                window.location.href = "/admin/job/{{ $main_home }}/{{ $category_id }}/create";
+                window.location.href = "/mtchub/admin/job/{{ $main_home }}/{{ $category_id }}/create";
             @endif
         }
     </script>

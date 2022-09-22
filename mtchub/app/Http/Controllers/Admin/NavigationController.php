@@ -38,7 +38,7 @@ class NavigationController extends Controller
         $next_position = $current_max_position + 1;
         $categories = Navigation::where('page_type','group')->where('nav_category', $category)->get();
         // return $categories;
-        return view('/mtchub/admin.navigation.navigation_create',compact('category','next_position','categories','main_home','category_id'));
+        return view('admin.navigation.navigation_create',compact('category','next_position','categories','main_home','category_id'));
     }
 
     
