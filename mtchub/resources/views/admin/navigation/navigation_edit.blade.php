@@ -54,7 +54,7 @@
                     <label for="nav_name">Name <i class="reqr">*</i> (For Admin and Slug) </label>
                     <input type="text" class="form-control {{ $errors->has('nav_name') ? 'has-error' : '' }}" id="nav_name" name="nav_name" placeholder="Navigation Name" value="{{$navigation->nav_name}}" required="required">
 
-                    <input type="hidden" name="alias" class="form-control {{ $errors->has('alias') ? 'has-error' : '' }}" placeholder="Alias" id="alias" required="" value="{{$navigation->alias}}">
+                    <input type="hidden" name="alias" class="form-control {{ $errors->has('alias') ? 'has-error' :'' }}" placeholder="Alias" id="alias" required="" value="{{$navigation->alias}}">
                 </div>
                 
                 <div class="form-group col-md-2">
@@ -229,7 +229,7 @@
             <div class="form-group col-md-12">
                 <label for="img_file">Icon Image </label> 
                     @if($navigation->icon_image)              
-                    <img src="{{asset('//mtchub/uploads/icon_image/'.$navigation->icon_image)}}" alt="" height="150" width="100%">                    
+                    <img src="/mtchub{{asset('/uploads/icon_image/'.$navigation->icon_image)}}" alt="" height="150" width="100%">                    
                     <a href="/mtchub/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}" onclick="return confirm('Are you sure to delete')" style="color: red">Remove Icon Image</a>
                     @endif
                     <input  type="file" class="form-control"  id="img_file" name="icon_image">                    
@@ -237,7 +237,7 @@
             <div class="form-group col-md-12">
                 <label for="img_file">Featured Image </label> 
                     @if($navigation->featured_image)              
-                    <img src="{{asset('/mtchub/uploads/featured_image/'.$navigation->featured_image)}}" alt="" height="150" width="100%">                    
+                    <img src="/{{asset('/mtchub/uploads/featured_image/'.$navigation->featured_image)}}" alt="" height="150" width="100%">                    
                     <a href="/mtchub/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}/deleteimage2" onclick="return confirm('Are you sure to delete')" style="color: red">Remove Featured Image</a>
                     @endif
                     <input  type="file" class="form-control"  id="img_file" name="featured_image">                    
@@ -253,7 +253,7 @@
             <div class="form-group col-md-12">
                 <label for="banner_file">Banner Image</label>
                     @if($navigation->banner_image)   
-                    <img src="{{asset($navigation->banner_image)}}" alt="" height="150" width="100%">                    
+                    <img src="/mtchub/{{asset($navigation->banner_image)}}" alt="" height="150" width="100%">                    
                     <a href="/mtchub/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}/deleteimage3" onclick="return confirm('Are you sure to delete')" style="color: red">Remove Banner Image</a>
                     @endif                
                     <input class="form-control" type="file" id="banner_file" name="banner_image">

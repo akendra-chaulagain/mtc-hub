@@ -82,7 +82,7 @@ $newsBreed = App\Models\Navigation::find($normal->parent_page_id);
                                                     {{ route('category', $menusitem->nav_name) }}">{{ $menusitem->caption }}<i
                                                 class="fa fa-angle-right"></i></a></li>
                                 @endforeach
-                                <li class="sidebar__category-list-item"><a href="/contact">Contact<i
+                                <li class="sidebar__category-list-item"><a href="/mtchub/contact">Contact<i
                                             class="fa fa-angle-right"></i></a></li>
 
                             </ul><!-- /.sidebar__category-list -->

@@ -14,7 +14,7 @@
                         <h3 class="title">{{ $page_parent->caption }}</h3>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/mtchub/">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">{{ $page_parent->caption }}</li>
                             </ol>
                         </nav>
@@ -36,9 +36,9 @@
                             <div class="news-thumb">
 
                                 @if ($news_list->banner_image)
-                                    <img src="{{ $news_list->banner_image }}" alt="news">
+                                    <img src="/mtchub/{{ $news_list->banner_image }}" alt="news">
                                 @else
-                                    <img src="/website/news-1.jpg" alt="news">
+                                    <img src="/mtchub/website/news-1.jpg" alt="news">
                                 @endif
 
                             </div>
