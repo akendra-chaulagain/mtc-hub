@@ -15,12 +15,12 @@
                               @if ($home_newsitem->banner_image)
                                   <img src="{{ $home_newsitem->banner_image }}" alt="news">
                               @else
-                                  <img src="/website/news-1.jpg" alt="news">
+                                  <img src="/mtchub/website/news-1.jpg" alt="news">
                               @endif
 
                           </div>
                           <div class="news-content">
-                              <a href="{{ route('single_news', $home_newsitem->nav_name) }}">
+                              <a href="/mtchub/{{ route('single_news', $home_newsitem->nav_name) }}">
                                   <h3 class="title">{{ $home_newsitem->caption }} <i class="flaticon-right-arrow"></i>
                                   </h3>
                               </a>
@@ -33,7 +33,7 @@
           </div>
           <div class="row justify-content-center text-center">
               <div class="col-lg-5">
-                  <a class="main-btn main-btn-2" href="/news&events">View All</a>
+                  <a class="main-btn main-btn-2" href="/mtchub/news&events">View All</a>
               </div>
           </div>
       </div>
