@@ -103,7 +103,7 @@
                 </div>
 
                 <div class="form-group col-md-6">
-                    <img src="{{asset('public/uploads/icons/'.$global_setting->favicon)}}" width="150px"
+                    <img src="{{asset('/mtchub/public/uploads/icons/'.$global_setting->favicon)}}" width="150px"
                          class="img-responsive img-thumbnail">
                 </div>
                 <div class="clearfix"></div>
@@ -114,7 +114,7 @@
                 </div>
 
                 <div class="form-group col-md-6">
-                    <img src="{{asset('public/uploads/icons/'.$global_setting->site_logo)}}" width="150px"
+                    <img src="{{asset('/mtchub/public/uploads/icons/'.$global_setting->site_logo)}}" width="150px"
                          class="img-responsive img-thumbnail">
                 </div>
                 <div class="clearfix"></div>
@@ -125,7 +125,7 @@
                 </div>
 
                 <div class="form-group col-md-6">
-                    <img src="{{asset('public/uploads/icons/'.$global_setting->site_logo_nepali)}}" width="150px"
+                    <img src="{{asset('/mtchub/public/uploads/icons/'.$global_setting->site_logo_nepali)}}" width="150px"
                          class="img-responsive img-thumbnail">
                 </div>
 
