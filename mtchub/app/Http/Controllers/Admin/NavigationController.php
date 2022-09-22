@@ -31,7 +31,7 @@ class NavigationController extends Controller
             $category_id = \Request::segment(4);
             //return $category_id;
             $current_max_position = Navigation::where('parent_page_id',$request_segment)->max('position');
-            $category .= '/mtchub/'.$request_segment;
+            $category .= '/'.$request_segment;
         }
         $category_id = intval($category_id);
         //return $category_id;
@@ -59,7 +59,7 @@ class NavigationController extends Controller
         $request_segment = \Request::segment(4);
         $parent_id = intval($request_segment);
         $data['parent_page_id'] = $parent_id;
-        $parent_id = ($parent_id == '')?'':'/'.$parent_id;
+        $parent_id = ($parent_id == '')?'':'/mtchub/'.$parent_id;
 
         if($request->hasFile('icon_image')){
             $img_file = $request->file('icon_image');
