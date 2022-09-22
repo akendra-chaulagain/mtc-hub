@@ -10,31 +10,31 @@
         </div>
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu">
-            <li class="{{Request::is('admin/dashboard')?'active':''}} treeview"><a
+            <li class="{{Request::is('/mtchub/admin/dashboard')?'active':''}} treeview"><a
                         href="{{route('admin.dashboard')}}"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
             </li>
            
-            <li class="{{Request::is('admin/navigation-list/Main')?'active':''}} treeview"><a
-                        href="{{url('/admin/navigation-list/Main')}}"><i class="fa fa-list"></i>
+            <li class="{{Request::is('/mtchub/admin/navigation-list/Main')?'active':''}} treeview"><a
+                        href="{{url('/mtchub/admin/navigation-list/Main')}}"><i class="fa fa-list"></i>
                     <span>Main Navigation</span></a></li>
-            <li class="{{Request::is('admin/navigation-list/Home')?'active':''}} treeview"><a
-                        href="{{url('/admin/navigation-list/Home')}}"><i class="fa fa-list"></i>
+            <li class="{{Request::is('/mtchub/admin/navigation-list/Home')?'active':''}} treeview"><a
+                        href="{{url('/mtchub/admin/navigation-list/Home')}}"><i class="fa fa-list"></i>
                     <span>Home Navigation</span></a></li>
-                    <li class="{{Request::is('admin/navigation-list/SNS')?'active':''}}  treeview"><a href="{{url('/admin/navigation-list/SNS')}}"><i class="fa fa-list"></i> <span>SNS Navigation</span></a> </li>
-                    <li class="{{Request::is('admin/subscribers-list')?'active':''}} treeview"><a
-                        href="{{url('/admin/subscribers-list')}}"><i class="fa fa-list"></i>
+                    <li class="{{Request::is('/mtchub/admin/navigation-list/SNS')?'active':''}}  treeview"><a href="{{url('/mtchub/admin/navigation-list/SNS')}}"><i class="fa fa-list"></i> <span>SNS Navigation</span></a> </li>
+                    <li class="{{Request::is('/mtchub/admin/subscribers-list')?'active':''}} treeview"><a
+                        href="{{url('/mtchub/admin/subscribers-list')}}"><i class="fa fa-list"></i>
                     <span>Subscribers List</span></a></li>
-            <li class="{{Request::is('admin/global-setting')?'active':''}}  treeview"><a
-                        href="{{url('/admin/global-setting')}}"><i class="fa fa-cog"></i> <span>Global Setup</span></a>
+            <li class="{{Request::is('/mtchub/admin/global-setting')?'active':''}}  treeview"><a
+                        href="{{url('/mtchub/admin/global-setting')}}"><i class="fa fa-cog"></i> <span>Global Setup</span></a>
             </li>
             <!--------customized by MD------------>
-             <li class="{{Request::is('admin/job-list')?'active':''}}  treeview"><a
+             <li class="{{Request::is('/mtchub/admin/job-list')?'active':''}}  treeview"><a
                         href="{{url('/admin/job-list')}}"><i class="fa fa-cog"></i> <span>JOBS</span></a>
             </li>
             <!----------end------------>
                <!--------customized by MD------------>
-             <li class="{{Request::is('admin/applied-job-list')?'active':''}}  treeview"><a
-                        href="{{url('/admin/applied-job-list')}}"><i class="fa fa-cog"></i> <span>Applied Job</span></a>
+             <li class="{{Request::is('/mtchub/mtchub/admin/applied-job-list')?'active':''}}  treeview"><a
+                        href="{{url('/mtchub/admin/applied-job-list')}}"><i class="fa fa-cog"></i> <span>Applied Job</span></a>
             </li>
             <!----------end------------>
         </ul>
