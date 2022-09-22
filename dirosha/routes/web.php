@@ -19,7 +19,7 @@ use App\Http\Controllers\AdmissionController;
 Auth::routes();
 
 Route::get('/dirosha', 'HomeController@index');
-Route::prefix('admin')->group(function(){
+Route::prefix('/dirosha/admin')->group(function(){
     
     Route::get('/','Auth\AdminLoginController@index');
     Route::post('/login','Auth\AdminLoginController@login')->name('login.submit');
@@ -128,58 +128,58 @@ Route::prefix('admin')->group(function(){
 
 
 // admission ceate
-Route::get('/admision', 'AdmissionController@AddAdmission');
-Route::post('/admissionforms', [AdmissionController::class, 'stores'])->name('admission_form');
+Route::get('/dirosha/admision', 'AdmissionController@AddAdmission');
+Route::post('/dirosha/admissionforms', [AdmissionController::class, 'stores'])->name('admission_form');
 
 
 
-Route::get('/details/{informationslug}', [HomeController::class, 'singlePage'])->name('single_news');
+Route::get('/dirosha/details/{informationslug}', [HomeController::class, 'singlePage'])->name('single_news');
 
-Route::get('/message/{informationslug}', [HomeController::class, 'single_message'])->name('single_message');
-
-
-
-Route::get('get_gallery_photos',[HomeController::class,'get_gallery_photos'])->name('get_gallery_photos');
-Route::get('gallery-view/{slug}',[HomeController::class,'GalleryView'])->name('galleryview');
-Route::get('inquiry',[ContactController::class,'inquiry'])->name('inquiry');
-Route::get('job-category',[HomeController::class,'allCategory'])->name('allCategory');
-
-
-Route::get('/all-jobs',[HomeController::class,'allJobs'])->name('allJobs');
-Route::get('/all-testomonial',[HomeController::class, 'AllTestomonials']);
+Route::get('/dirosha/message/{informationslug}', [HomeController::class, 'single_message'])->name('single_message');
 
 
 
+Route::get('/dirosha/get_gallery_photos',[HomeController::class,'get_gallery_photos'])->name('get_gallery_photos');
+Route::get('/dirosha/gallery-view/{slug}',[HomeController::class,'GalleryView'])->name('galleryview');
+Route::get('/dirosha/inquiry',[ContactController::class,'inquiry'])->name('inquiry');
+Route::get('/dirosha/job-category',[HomeController::class,'allCategory'])->name('allCategory');
 
 
-
-Route::get('read-more/{slug}',[HomeController::class,'ReadMore'])->name('readmore');
-
-Route::POST('jobapply/store/{slug}',[ContactController::class,'ContactStore'])->name('storeapply');
-
-
-
-
-Route::get('/jobdetail/{jobslug}',[HomeController::class,'singlePage'])->name('single_job');
+Route::get('/dirosha/all-jobs',[HomeController::class,'allJobs'])->name('allJobs');
+Route::get('/dirosha/all-testomonial',[HomeController::class, 'AllTestomonials']);
 
 
 
 
 
 
+Route::get('/dirosha/read-more/{slug}',[HomeController::class,'ReadMore'])->name('readmore');
 
-Route::get('/jobapply/{jobslug}',[ContactController::class,'jobApply'])->name('jobapply');
-Route::get('/contact',[ContactController::class,'Contact'])->name('contact');
-
-
-
-
-Route::POST('contact/store',[ContactController::class,'ContactStore'])->name('contactstore');
+Route::POST('/dirosha/jobapply/store/{slug}',[ContactController::class,'ContactStore'])->name('storeapply');
 
 
 
-Route::get('/{slug}',[HomeController::class,'category'])->name('category');
+
+Route::get('/dirosha/jobdetail/{jobslug}',[HomeController::class,'singlePage'])->name('single_job');
 
 
 
-Route::get('/{category}/{subcategory}',[HomeController::class,'subcategory'])->name('subcategory');
+
+
+
+
+Route::get('/dirosha/jobapply/{jobslug}',[ContactController::class,'jobApply'])->name('jobapply');
+Route::get('/dirosha/contact',[ContactController::class,'Contact'])->name('contact');
+
+
+
+
+Route::POST('/dirosha/contact/store',[ContactController::class,'ContactStore'])->name('contactstore');
+
+
+
+Route::get('/dirosha/{slug}',[HomeController::class,'category'])->name('category');
+
+
+
+Route::get('/dirosha/{category}/{subcategory}',[HomeController::class,'subcategory'])->name('subcategory');
