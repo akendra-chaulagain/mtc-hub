@@ -68,7 +68,7 @@ if (isset($normal)) {
     <meta property="og:url" content="{{ $global_setting->website_full_address ?? '' }}">
     <meta property="og:title" content="{{ $seo->page_title ?? $global_setting->page_title }}">
     <meta property="og:description" content="{{ $seo->page_description ?? $global_setting->page_description }}">
-    <meta property="og:image" content="{{ $seo->banner_image ?? '/uploads/icons/' . $global_setting->site_logo }}">
+    <meta property="og:image" content="/dirosha/{{ $seo->banner_image ?? '/dirosha/uploads/icons/' . $global_setting->site_logo }}">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -76,21 +76,21 @@ if (isset($normal)) {
     <meta property="twitter:title" content="{{ $seo->page_title ?? $global_setting->page_title }}">
     <meta property="twitter:description" content="{{ $seo->page_description ?? $global_setting->page_description }}">
     <meta property="twitter:image"
-        content="{{ $seo->banner_image ?? '/uploads/icons/' . $global_setting->site_logo }}">
+        content="{{ $seo->banner_image ?? '/dirosha/uploads/icons/' . $global_setting->site_logo }}">
 
 
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Barlow:400,600%7COpen+Sans:400,400i,700' rel='stylesheet'>
 
     <!-- Css -->
-    <link rel="stylesheet" href="/website/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/website/css/font-icons.css" />
-    <link rel="stylesheet" href="/website/revolution/css/settings.css" />
-    <link rel="stylesheet" href="/website/css/style.css" />
+    <link rel="stylesheet" href="/dirosha/website/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/dirosha/website/css/font-icons.css" />
+    <link rel="stylesheet" href="/dirosha/website/revolution/css/settings.css" />
+    <link rel="stylesheet" href="/dirosha/website/css/style.css" />
 
     <!-- Favicons -->
     {{-- <link rel="shortcut icon" href="images/favicon.png"> --}}
-    <link rel="shortcut icon" href="{{ '/uploads/icons/' . $global_setting->favicon }}" type="image/png">
+    <link rel="shortcut icon" href="{{ '/dirosha/uploads/icons/' . $global_setting->favicon }}" type="image/png">
 
     <link rel="stylesheet" href='https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css'>
 
@@ -115,8 +115,8 @@ if (isset($normal)) {
 
                         <div class="nav__header">
                             <!-- Logo -->
-                            <a href="index.html" class="logo-container flex-child">
-                                <img class="logo" src={{ '/uploads/icons/' . $global_setting->site_logo }}
+                            <a href="/dirosha/" class="logo-container flex-child">
+                                <img class="logo" src={{ '/dirosha/uploads/icons/' . $global_setting->site_logo }}
                                     alt="logo">
                             </a>
 
@@ -134,7 +134,7 @@ if (isset($normal)) {
                         <nav id="navbar-collapse" class="nav__wrap collapse navbar-collapse">
                             <ul class="nav__menu">
                                 <li class="active">
-                                    <a href="/">Home</a>
+                                    <a href="/dirosha/">Home</a>
                                 </li>
 
                                 @foreach ($menus as $menu)
@@ -161,7 +161,7 @@ if (isset($normal)) {
 
 
                                 <li>
-                                    <a href="/contact">Contact Us</a>
+                                    <a href="/dirosha/contact">Contact Us</a>
                                 </li>
                             </ul> <!-- end menu -->
                             <div class="nav__phone nav__phone--mobile d-lg-none">
@@ -249,7 +249,7 @@ if (isset($normal)) {
                             <div class="widget widget-about-us">
                                 <!-- Logo -->
                                 <a href="index.html" class="logo-container flex-child">
-                                    <img class="logo" src={{ '/uploads/icons/' . $global_setting->site_logo }} alt="logo">
+                                    <img class="logo" src={{ '/dirosha/uploads/icons/' . $global_setting->site_logo }} alt="logo">
                                 </a>
                             </div>
                         </div> <!-- end logo -->
@@ -257,12 +257,12 @@ if (isset($normal)) {
                         <div class="col-lg-2 col-md-3">
                             <div class="widget widget_nav_menu">
                                 <ul>
-                                    <li> <a href="/">Home</a>
+                                    <li> <a href="/dirosha/">Home</a>
 
-                                <li> <a href="/About-us">Video Galery</a>
+                                <li> <a href="/dirosha/About-us">Video Galery</a>
 
                                
-                                <li> <a href="/news&events">News & Events</a>
+                                <li> <a href="/dirosha/news&events">News & Events</a>
                                
                             </ul>
                         </div>
@@ -271,12 +271,12 @@ if (isset($normal)) {
                     <div class="col-lg-2 col-md-3">
                         <div class="widget widget_nav_menu">
                             <ul>
-                                <li> <a href="/gallery/photo-gallery">Image Gallery</a>
+                                <li> <a href="/dirosha/gallery/photo-gallery">Image Gallery</a>
 
-                                <li> <a href="/gallery/video-gallery">Video Galery</a>
+                                <li> <a href="/dirosha/gallery/video-gallery">Video Galery</a>
 
                                
-                                <li> <a href="/contact">Contact</a>
+                                <li> <a href="/dirosha/contact">Contact</a>
                             </li>
                             </ul>
 
@@ -334,25 +334,25 @@ if (isset($normal)) {
 
 
     <!-- jQuery Scripts -->
-    <script src="/website/js/jquery.min.js"></script>
-    <script src="/website/js/bootstrap.min.js"></script>
-    <script src="/website/js/plugins.js"></script>
-    <script src="/website/revolution/js/jquery.themepunch.tools.min.js"></script>
-    <script src="/website/revolution/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="/website/js/rev-slider.js"></script>
-    <script src="/website/js/scripts.js"></script>
+    <script src="/dirosha/website/js/jquery.min.js"></script>
+    <script src="/dirosha/website/js/bootstrap.min.js"></script>
+    <script src="/dirosha/website/js/plugins.js"></script>
+    <script src="/dirosha/website/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="/dirosha/website/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="/dirosha/website/js/rev-slider.js"></script>
+    <script src="/dirosha/website/js/scripts.js"></script>
 
 
     <!-- Rev Slider Offline Scripts -->
-    <script src="/website/revolution/js/extensions/revolution.extension.video.min.js"></script>
-    <script src="/website/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-    <script src="/website/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-    <script src="/website/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-    <script src="/website/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-    <script src="/website/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-    <script src="/website/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-    <script src="/website/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-    <script src="/website/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="/dirosha/website/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="/dirosha/website/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="/dirosha/website/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="/dirosha/website/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="/dirosha/website/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="/dirosha/website/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="/dirosha/website/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="/dirosha/website/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="/dirosha/website/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
 
 
 
@@ -360,17 +360,17 @@ if (isset($normal)) {
 
 
     <!-- gllery js -->
-    <script src="/website/js/gallery/picturefill.min.js"></script>
-    <script src="/website/js/gallery/lightgallery.js"></script>
-    <script src="/website/js/gallery/lg-pager.js"></script>
-    <script src="/website/js/gallery/lg-autoplay.js"></script>
-    <script src="/website/js/gallery/lg-fullscreen.js"></script>
-    <script src="/website/js/gallery/lg-zoom.js"></script>
-    <script src="/website/js/gallery/lg-hash.js"></script>
-    <script src="/website/js/gallery/lg-share.js"></script>
+    <script src="/dirosha/website/js/gallery/picturefill.min.js"></script>
+    <script src="/dirosha/website/js/gallery/lightgallery.js"></script>
+    <script src="/dirosha/website/js/gallery/lg-pager.js"></script>
+    <script src="/dirosha/website/js/gallery/lg-autoplay.js"></script>
+    <script src="/dirosha/website/js/gallery/lg-fullscreen.js"></script>
+    <script src="/dirosha/website/js/gallery/lg-zoom.js"></script>
+    <script src="/dirosha/website/js/gallery/lg-hash.js"></script>
+    <script src="/dirosha/website/js/gallery/lg-share.js"></script>
     <!--End gllery js -->
 
-    <script src="/website/js/scripts.js"></script>
+    <script src="/dirosha/website/js/scripts.js"></script>
 
     <script>
         lightGallery(document.getElementById('lightgallery'));
@@ -403,7 +403,7 @@ if (isset($normal)) {
 
 
 
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="//dirosha/cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
     @if (Session::has('contact'))
