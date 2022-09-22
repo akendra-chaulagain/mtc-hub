@@ -13,7 +13,7 @@
                         <h3 class="title">{{ $normal->caption }}</h3>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/mtchub/">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">{{ $normal->caption }}</li>
                             </ol>
                         </nav>
@@ -32,9 +32,9 @@
                 @foreach ($category as $categoryitem)
                     <div class="col-lg-4 col-md-6">
                         <div class="news-item active bg_cover"
-                            style="background-image: url({{ $categoryitem->banner_image }});">
+                            style="background-image: url(/mtchub/{{ $categoryitem->banner_image }});">
                             <h3 class="title">{{ $categoryitem->caption }}</h3>
-                            <a href="{{ $normal->nav_name }}/{{ $categoryitem->nav_name }}"><i
+                            <a href="/mtchub/{{ $normal->nav_name }}/{{ $categoryitem->nav_name }}"><i
                                     class="flaticon-right-arrow"></i></a>
 
 

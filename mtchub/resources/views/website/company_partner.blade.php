@@ -38,7 +38,7 @@ if (
                         @foreach ($partners as $partner)
                             <div class="col-sm-4">
                                 <div class="logo-item mt-15">
-                                    <img src="{{ $partner->banner_image }}" alt="partner_image">
+                                    <img src="/mtchub/{{ $partner->banner_image }}" alt="partner_image">
                                 </div>
                             </div>
                         @endforeach
