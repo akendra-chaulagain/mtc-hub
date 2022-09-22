@@ -156,7 +156,7 @@ if (isset($normal)) {
                         <div id="menu" class="text-left ">
                             <ul class="offcanvas_main_menu">
                                  <li>
-                                            <a class="active" href="/mtchub/">Home</a>
+                                            <a class="active" href="https://mtc.demo.radiantnepal.com/mtchub/">Home</a>
                                         </li>
                                
                                
@@ -188,7 +188,7 @@ if (isset($normal)) {
                                         @endforeach
 
                                         <li>
-                                            <a href="/contact">Contact</a>
+                                            <a href="https://mtc.demo.radiantnepal.com/mtchub/contact">Contact</a>
                                         </li>
                                
                              
@@ -239,7 +239,7 @@ if (isset($normal)) {
                                 <div class="header-menu d-none d-lg-block">
                                     <ul>
                                         <li>
-                                            <a class="active" href="/">Home</a>
+                                            <a class="active" href="https://mtc.demo.radiantnepal.com/mtchub/">Home</a>
                                         </li>
 
 
@@ -272,7 +272,7 @@ if (isset($normal)) {
                                         @endforeach
 
                                         <li>
-                                            <a href="/contact">Contact</a>
+                                            <a href="https://mtc.demo.radiantnepal.com/mtchub/contact">Contact</a>
                                         </li>
 
 
@@ -449,31 +449,31 @@ if (isset($normal)) {
 
 
 <!--====== jquery js ======-->
-<script src="/website/js/vendor/modernizr-3.6.0.min.js"></script>
-<script src="/website/js/vendor/jquery-3.5.0.js"></script>
+<script src="/mtchub/website/js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="/mtchub/website/js/vendor/jquery-3.5.0.js"></script>
 
 <!--====== Bootstrap js ======-->
-<script src="/website/js/bootstrap.min.js"></script>
-<script src="/website/js/popper.min.js"></script>
+<script src="/mtchub/website/js/bootstrap.min.js"></script>
+<script src="/mtchub/website/js/popper.min.js"></script>
 
 <!--====== Slick js ======-->
-<script src="/website/js/slick.min.js"></script>
+<script src="/mtchub/website/js/slick.min.js"></script>
 
 <!--====== odometer js ======-->
-<script src="/website/js/jquery.counterup.min.js"></script>
-<script src="/website/js/jquery.waypoints.min.js"></script>
+<script src="/mtchub/website/js/jquery.counterup.min.js"></script>
+<script src="/mtchub/website/js/jquery.waypoints.min.js"></script>
 
 <!--====== wow js ======-->
-<script src="/website/js/wow.js"></script>
+<script src="/mtchub/website/js/wow.js"></script>
 
 <!--====== nice select js ======-->
-<script src="/website/js/jquery.nice-select.min.js"></script>
+<script src="/mtchub/website/js/jquery.nice-select.min.js"></script>
 
 <!--====== Magnific Popup js ======-->
-<script src="/website/js/jquery.magnific-popup.min.js"></script>
+<script src="/mtchub/website/js/jquery.magnific-popup.min.js"></script>
 
 <!--====== Main js ======-->
-<script src="/website/js/main.js"></script>
+<script src="/mtchub/website/js/main.js"></script>
 
 
 
