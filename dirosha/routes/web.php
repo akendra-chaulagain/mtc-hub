@@ -18,7 +18,7 @@ use App\Http\Controllers\AdmissionController;
 
 Auth::routes();
 
-Route::get('/', 'HomeController@index');
+Route::get('/dirosha', 'HomeController@index');
 Route::prefix('admin')->group(function(){
     
     Route::get('/','Auth\AdminLoginController@index');
