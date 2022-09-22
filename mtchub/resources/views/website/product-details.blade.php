@@ -24,16 +24,16 @@ $productsParent = App\Models\Navigation::find($products->parent_page_id);
                         <h3 class="title">{{ $notice_heading->caption }}</h3>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/mtchub/">Home</a></li>
 
                                 @if ($productsParent)
                                     <li class="breadcrumb-item"><a
-                                            href="/{{ $productsParent->nav_name }}">{{ $productsParent->caption ?? ' ' }}</a>
+                                            href="/mtchub/{{ $productsParent->nav_name }}">{{ $productsParent->caption ?? ' ' }}</a>
                                     </li>
 
 
                                     <li class="breadcrumb-item"><a
-                                            href="/{{ $productsParent->nav_name }}/{{ $products->nav_name }}">{{ $products->caption ?? ' ' }}</a>
+                                            href="/mtchub/{{ $productsParent->nav_name }}/{{ $products->nav_name }}">{{ $products->caption ?? ' ' }}</a>
                                     </li>
                                     <li class="breadcrumb-item active" aria-current="page">{{ $notice_heading->caption }}
                                     </li>
@@ -44,7 +44,7 @@ $productsParent = App\Models\Navigation::find($products->parent_page_id);
                                
 
 
-                                <li class="breadcrumb-item"><a href="/{{ $products->nav_name }}">{{ $products->caption ?? " " }}</a></li>
+                                <li class="breadcrumb-item"><a href="/mtchub/{{ $products->nav_name }}">{{ $products->caption ?? " " }}</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">{{ $notice_heading->caption }}</li>
 
 
@@ -78,9 +78,9 @@ $productsParent = App\Models\Navigation::find($products->parent_page_id);
                                 @foreach ($product_item_details as $product_item_detail)
                                     <div class="col-lg-4 col-md-6 col-sm-6">
                                         <div class="gallery-thumb mt-30">
-                                            <img src="{{ $product_item_detail->banner_image }}" alt="gallery">
+                                            <img src="/mtchub/{{ $product_item_detail->banner_image }}" alt="gallery">
                                             <a class="main-btn image-popup"
-                                                href="{{ $product_item_detail->banner_image }}"><i
+                                                href="/mtchub/{{ $product_item_detail->banner_image }}"><i
                                                     class="flaticon-plus"></i></a>
                                         </div>
                                     </div>
