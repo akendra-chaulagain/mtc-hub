@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
-{{-- @push('title')
-    Home
-@endpush --}}
+@push('title')
+    {{ $page_parent->caption }}
+@endpush
 
 @section('content')
     <div class="page-title-area bg_cover"

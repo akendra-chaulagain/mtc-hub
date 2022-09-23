@@ -11,7 +11,7 @@ $productsParent = App\Models\Navigation::find($products->parent_page_id);
 @extends('layouts.master')
 
 @push('title')
-    {{-- {{ $information_detail->caption ?? 'Courses Details ' }} --}}
+    {{ $notice_heading->caption }}
 @endpush
 
 @section('content')

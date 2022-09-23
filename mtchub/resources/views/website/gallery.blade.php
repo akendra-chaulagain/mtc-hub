@@ -17,7 +17,7 @@
                         <h3 class="title">Image Gallery</h3>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/mtchub/">Home</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">Image Gallery</li>
                             </ol>
                         </nav>
@@ -39,10 +39,10 @@
                         <div class="col-lg-3 col-md-4">
                             <a href="{{ route('galleryview', $photo->nav_name) }}">
                                 <div class="folder">
-                                    <div class="paper folder-pop"><img src="{{ $photo->banner_image}}" width="100%"></div>
-                                    <div class="paper folder-pop-middle"><img src="{{ $photo->banner_image }}" width="100%">
+                                    <div class="paper folder-pop"><img src="/mtchub/{{ $photo->banner_image}}" width="100%"></div>
+                                    <div class="paper folder-pop-middle"><img src="/mtchub/{{ $photo->banner_image }}" width="100%">
                                     </div>
-                                    <div class="paper folder-pop-last"><img src="{{ $photo->banner_image }}" width="100%">
+                                    <div class="paper folder-pop-last"><img src="/mtchub/{{ $photo->banner_image }}" width="100%">
                                     </div>
                                 </div>
                                 <h5 class="folder-text">{{ $photo->caption }}</h5>

@@ -20,7 +20,7 @@ $galleryFeed = App\Models\Navigation::find($normal->parent_page_id);
 
 
 @push('title')
-    Image gallery
+   {{ $normal->caption }}
 @endpush
 
 
@@ -34,8 +34,8 @@ $galleryFeed = App\Models\Navigation::find($normal->parent_page_id);
                         <h3 class="title">{{ $normal->caption }} </h3>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="/">Home</a></li>
-                                <li class="breadcrumb-item"><a href="/{{ $galleryFeed->nav_name }}">{{ $galleryFeed->caption }}</a></li>
+                                <li class="breadcrumb-item"><a href="/mtchub">Home</a></li>
+                                <li class="breadcrumb-item"><a href="/mtchub/{{ $galleryFeed->nav_name }}">{{ $galleryFeed->caption }}</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">{{ $normal->caption }}</li>
                             </ol>
                         </nav>
@@ -56,8 +56,8 @@ $galleryFeed = App\Models\Navigation::find($normal->parent_page_id);
                     @foreach ($photos as $photo)
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="gallery-thumb mt-30">
-                                <img src="/uploads/photo_gallery/{{ $photo->file }}" alt="gallery">
-                                <a class="main-btn image-popup" href="/uploads/photo_gallery/{{ $photo->file }}"><i
+                                <img src="/mtchub/uploads/photo_gallery/{{ $photo->file }}" alt="gallery">
+                                <a class="main-btn image-popup" href="/mtchub/uploads/photo_gallery/{{ $photo->file }}"><i
                                         class="flaticon-plus"></i></a>
                             </div>
                         </div>
