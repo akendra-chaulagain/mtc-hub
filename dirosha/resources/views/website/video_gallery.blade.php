@@ -8,13 +8,13 @@
 
 
 @section('content')
-     <section class="page-title bg-dark-overlay text-center" style="background-image: url(/website/images/portfolio.jpg);">
+     <section class="page-title bg-dark-overlay text-center" style="background-image: url(/dirosha/website/images/portfolio.jpg);">
         <div class="container">
             <div class="page-title__holder">
                 <h1 class="page-title__title">Video Gallery</h1>
                 <ul class="breadcrumbs">
                     <li class="breadcrumbs__item">
-                        <a href="/" class="breadcrumbs__url">Home</a>
+                        <a href="/dirosha/" class="breadcrumbs__url">Home</a>
                     </li>
                     <li class="breadcrumbs__item breadcrumbs__item--current">
                         Video Gallery

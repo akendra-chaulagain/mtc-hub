@@ -1,8 +1,8 @@
 @extends('layouts.master')
 
-{{-- @push('title')
-    Home
-@endpush --}}
+@push('title')
+    News & Events
+@endpush
 
 @section('content')
     	<!-- Page Title -->

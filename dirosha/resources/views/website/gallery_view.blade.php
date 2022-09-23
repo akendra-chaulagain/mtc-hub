@@ -27,10 +27,10 @@ $galleryFeed = App\Models\Navigation::find($normal->parent_page_id);
                 <h1 class="page-title__title">{{ $galleryFeed->caption }}</h1>
                 <ul class="breadcrumbs">
                     <li class="breadcrumbs__item">
-                        <a href="/" class="breadcrumbs__url">Home</a>
+                        <a href="/dirosha/" class="breadcrumbs__url">Home</a>
                     </li>
                     <li class="breadcrumbs__item">
-                        <a href="/{{ $galleryFeed->nav_name }}" class="breadcrumbs__url">{{ $galleryFeed->caption }}</a>
+                        <a href="/dirosha/{{ $galleryFeed->nav_name }}" class="breadcrumbs__url">{{ $galleryFeed->caption }}</a>
                     </li>
                     <li class="breadcrumbs__item breadcrumbs__item--current">
                         {{ $normal->caption }}
@@ -50,10 +50,10 @@ $galleryFeed = App\Models\Navigation::find($normal->parent_page_id);
                            @foreach ($photos as $photo)
 
                         <div class="item col-md-4 all 17"
-                            data-src="/uploads/photo_gallery/{{ $photo->file }}"
+                            data-src="/dirosha/uploads/photo_gallery/{{ $photo->file }}"
                           >
                             <a href="">
-                                <img src="/uploads/photo_gallery/{{ $photo->file }}"
+                                <img src="/dirosha/uploads/photo_gallery/{{ $photo->file }}"
                                     alt="Construction" />
                             </a>
                         </div>

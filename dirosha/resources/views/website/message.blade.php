@@ -35,7 +35,7 @@
                         <p class="subtitle">Latest news</p>
                     </div>
                     <div class="col-sm-6">
-                        <p class="view-all"><a href="/news&events">View All</a></p>
+                        <p class="view-all"><a href="/dirosha/news&events">View All</a></p>
                     </div>
                 </div>
                 <div class="from-blog">
@@ -47,9 +47,9 @@
                                     <a href="{{ route('single_news', $home_messageitem->nav_name) }}">
 
                                          @if ($home_messageitem->banner_image)
-                                             <img src="{{ $home_messageitem->banner_image }}" class="entry__img" alt="">
+                                             <img src="/dirosha/{{ $home_messageitem->banner_image }}" class="entry__img" alt="">
                                         @else
-                                            <img src="/website/images/award.jpg" alt="">
+                                            <img src="/dirosha/website/images/award.jpg" alt="">
                                         @endif
 
                                        
