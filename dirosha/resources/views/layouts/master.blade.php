@@ -403,7 +403,7 @@ if (isset($normal)) {
 
 
 
-    <script src="//dirosha/cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
     @if (Session::has('contact'))
