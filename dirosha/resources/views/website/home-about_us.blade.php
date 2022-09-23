@@ -7,7 +7,7 @@
             <div class="col-lg-7">
                 <h2 class="intro__title">{{ $about->caption ?? '' }}</h2>
                 <p>{!! $about->short_content ?? '' !!}</p>
-                <a href="/dirosha/about-us/">Read More +</a>
+                <a href="/dirosha/about-us">Read More +</a>
                 <p>{!! $about->long_content ?? '' !!}</p>
 
 
