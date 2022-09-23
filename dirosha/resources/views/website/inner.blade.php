@@ -22,7 +22,7 @@
 @section('content')
     @if ($normal->page_type == 'News' || $normal->page_type == 'Normal')
         <!-- Page Title -->
-        <section class="page-title bg-dark-overlay text-center" style="background-image: url(/website/images/portfolio.jpg);">
+        <section class="page-title bg-dark-overlay text-center" style="background-image: url(/dirosha/website/images/portfolio.jpg);">
             <div class="container">
                 <div class="page-title__holder">
                     <h1 class="page-title__title"> {{ $normal->caption ?? ' ' }}</h1>

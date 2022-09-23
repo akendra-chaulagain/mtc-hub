@@ -6,13 +6,13 @@
 
 @section('content')
     	<!-- Page Title -->
-			<section class="page-title bg-dark-overlay text-center" style="background-image: url(/website/images/portfolio.jpg);">
+			<section class="page-title bg-dark-overlay text-center" style="background-image: url(/dirosha/website/images/portfolio.jpg);">
 				<div class="container">
 					<div class="page-title__holder">
 						<h1 class="page-title__title">News & Events</h1>
 						<ul class="breadcrumbs">
 							<li class="breadcrumbs__item">
-								<a href="/" class="breadcrumbs__url">Home</a>
+								<a href="/dirosha/" class="breadcrumbs__url">Home</a>
 							</li>
 							<li class="breadcrumbs__item breadcrumbs__item--current">
 								News & Events
@@ -33,9 +33,9 @@
 								<div class="entry__img-holder">
 									<a href="#">
                                         @if ($news_list->banner_image)
-                                            <img src="{{ $news_list->banner_image }}" class="entry__img" alt="">
+                                            <img src="/dirosha/{{ $news_list->banner_image }}" class="entry__img" alt="">
                                         @else
-                                            <img src="/website/images/award.jpg" alt="">
+                                            <img src="/dirosha/website/images/award.jpg" alt="">
                                         @endif
 										
 									</a>
@@ -43,7 +43,7 @@
 								<div class="entry__body">
 									
 									<h2 class="entry__title">
-										<a href="#">{{ $news_list->caption }}</a>
+										<a href="{{ route('single_news', $news_list->nav_name) }}">{{ $news_list->caption }}</a>
 									</h2>
 									<a href="{{ route('single_news', $news_list->nav_name) }}" class="read-more">
 										<span class="read-more__text">Read More</span>

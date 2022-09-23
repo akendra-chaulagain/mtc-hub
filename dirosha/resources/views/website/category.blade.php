@@ -23,7 +23,7 @@ $products = App\Models\Navigation::find($project_heading->parent_page_id);
     <div class="content-wrapper content-wrapper--boxed oh">
 
         <!-- Page Title -->
-        <section class="page-title bg-dark-overlay text-center" style="background-image: url(/website/images/portfolio.jpg);">
+        <section class="page-title bg-dark-overlay text-center" style="background-image: url(/dirosha/website/images/portfolio.jpg);">
             <div class="container">
                 <div class="page-title__holder">
                     <h1 class="page-title__title">Our Project</h1>
