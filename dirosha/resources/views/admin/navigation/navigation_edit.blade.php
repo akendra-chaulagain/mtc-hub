@@ -46,7 +46,7 @@
         </div>
         <!-- form start -->
         
-        <form method="post" action="/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}"  enctype="multipart/form-data">
+        <form method="post" action="/dirosha/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}"  enctype="multipart/form-data">
             {{csrf_field()}}
             <input type="hidden" name="_method" value="PUT">            
             <div class="col-md-9" style="padding-top: 10px;">                
@@ -54,7 +54,7 @@
                     <label for="nav_name">Name <i class="reqr">*</i> (For Admin and Slug) </label>
                     <input type="text" class="form-control {{ $errors->has('nav_name') ? 'has-error' : '' }}" id="nav_name" name="nav_name" placeholder="Navigation Name" value="{{$navigation->nav_name}}" required="required">
 
-                    <input type="hidden" name="alias" class="form-control {{ $errors->has('alias') ? 'has-error' : '' }}" placeholder="Alias" id="alias" required="" value="{{$navigation->alias}}">
+                    <input type="hidden" name="alias" class="form-control {{ $errors->has('alias') ? 'has-error' :'' }}" placeholder="Alias" id="alias" required="" value="{{$navigation->alias}}">
                 </div>
                 
                 <div class="form-group col-md-2">
@@ -91,7 +91,7 @@
                 <div id="pre_attachment" class="form-group col-md-10">
                     <label for="attachment">Previous Document</label>
                     <div>{{$navigation->attachment}}</div>
-                    <a href="/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}/deleteattachment" onclick="return confirm('Are you sure to delete')" style="color: red">Remove Document</a>
+                    <a href="/dirosha/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}/deleteattachment" onclick="return confirm('Are you sure to delete')" style="color: red">Remove Document</a>
                 </div>
 
                 <div id="attachment_div" class="form-group col-md-10">
@@ -169,12 +169,6 @@
                 </div>
 
 
-                   <div id="project_detailst_div" class="form-group col-md-12">
-                        <label for="project_details">Project Details</label>
-                        <textarea class="form-control ckeditor" id="project_details" name="project_details" rows="10"
-                            placeholder="Main Content">{{$navigation->project_details}}</textarea>
-                    </div>
-
 
             <!-- <div id="photo_gallery_div" class="form-group col-md-12" style="display: none">
                 <div class="table-responsive" >
@@ -235,23 +229,23 @@
             <div class="form-group col-md-12">
                 <label for="img_file">Icon Image </label> 
                     @if($navigation->icon_image)              
-                    <img src="{{asset('uploads/icon_image/'.$navigation->icon_image)}}" alt="" height="150" width="100%">                    
-                    <a href="/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}" onclick="return confirm('Are you sure to delete')" style="color: red">Remove Icon Image</a>
+                    <img src="/dirosha{{asset('/uploads/icon_image/'.$navigation->icon_image)}}" alt="" height="150" width="100%">                    
+                    <a href="/dirosha/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}" onclick="return confirm('Are you sure to delete')" style="color: red">Remove Icon Image</a>
                     @endif
                     <input  type="file" class="form-control"  id="img_file" name="icon_image">                    
             </div>
             <div class="form-group col-md-12">
                 <label for="img_file">Featured Image </label> 
                     @if($navigation->featured_image)              
-                    <img src="{{asset('uploads/featured_image/'.$navigation->featured_image)}}" alt="" height="150" width="100%">                    
-                    <a href="/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}/deleteimage2" onclick="return confirm('Are you sure to delete')" style="color: red">Remove Featured Image</a>
+                    <img src="/{{asset('/dirosha/uploads/featured_image/'.$navigation->featured_image)}}" alt="" height="150" width="100%">                    
+                    <a href="/dirosha/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}/deleteimage2" onclick="return confirm('Are you sure to delete')" style="color: red">Remove Featured Image</a>
                     @endif
                     <input  type="file" class="form-control"  id="img_file" name="featured_image">                    
             </div> 
             @if(($navigation->parent_page_id) == 26 || ($navigation->id) == 7))
             @else           
             <div class="form-group col-md-12">
-                <label for="icon_image_caption">Icon Text</label>
+                <label for="icon_image_caption">Extra Caption</label>
                     <input class="form-control" type="text" id="icon_image_caption" name="icon_image_caption" placeholder="Extra Caption" value="{{$navigation->icon_image_caption}}">
             </div>
             @endif
@@ -259,8 +253,8 @@
             <div class="form-group col-md-12">
                 <label for="banner_file">Banner Image</label>
                     @if($navigation->banner_image)   
-                    <img src="{{asset($navigation->banner_image)}}" alt="" height="150" width="100%">                    
-                    <a href="/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}/deleteimage3" onclick="return confirm('Are you sure to delete')" style="color: red">Remove Banner Image</a>
+                    <img src="/dirosha/{{asset($navigation->banner_image)}}" alt="" height="150" width="100%">                    
+                    <a href="/dirosha/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}/deleteimage3" onclick="return confirm('Are you sure to delete')" style="color: red">Remove Banner Image</a>
                     @endif                
                     <input class="form-control" type="file" id="banner_file" name="banner_image">
             </div>
@@ -269,7 +263,7 @@
                 <div id="pre_attachment" class="form-group col-md-10">
                     <label for="main_attachment">Previous Main Document</label>
                     <div>{{$navigation->main_attachment}}</div>                    
-                    <a href="/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}/deletemainattachment" onclick="return confirm('Are you sure to delete')" style="color: red">Remove Document</a>
+                    <a href="/dirosha/admin/navigation-edit/{{$nav_category}}/{{$navigation->id}}/deletemainattachment" onclick="return confirm('Are you sure to delete')" style="color: red">Remove Document</a>
                 </div>
 
                 <div id="main_attachment" class="form-group col-md-10">
@@ -498,152 +492,6 @@
         });
 
     </script>
-
-     <script>
-        CKEDITOR.replace('project_details', {
-            toolbar: [{
-                    name: 'document',
-                    groups: ['mode', 'document', 'doctools'],
-                    items: ['Source']
-                },
-                {
-                    name: 'basicstyles',
-                    groups: ['basicstyles', 'cleanup'],
-                    items: ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-',
-                        'RemoveFormat'
-                    ]
-                },
-                {
-                    name: 'clipboard',
-                    groups: ['clipboard', 'undo'],
-                    items: ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']
-                },
-                {
-                    name: 'editing',
-                    groups: ['find', 'selection', 'spellchecker'],
-                    items: ['Find', 'Replace', '-', 'SelectAll']
-                },
-                '/',
-                {
-                    name: 'insert',
-                    items: ['Image', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'Iframe']
-                },
-                {
-                    name: 'paragraph',
-                    groups: ['list', 'indent', 'blocks', 'align', 'bidi'],
-                    items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-',
-                        'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr',
-                        'BidiRtl'
-                    ]
-                },
-                {
-                    name: 'links',
-                    items: ['Link', 'Unlink', 'Anchor']
-                },
-                '/',
-                {
-                    name: 'styles',
-                    items: ['Styles', 'Format', 'Font', 'FontSize']
-                },
-                {
-                    name: 'colors',
-                    items: ['TextColor', 'BGColor']
-                },
-                {
-                    name: 'tools',
-                    items: ['Maximize']
-                },
-                {
-                    name: 'others',
-                    items: ['-']
-                }
-            ],
-            uiColor: '#3c8dbc',
-            height: '200px',
-            enterMode: CKEDITOR.ENTER_BR,
-            filebrowserWindowWidth: '400',
-            filebrowserWindowHeight: '300',
-            filebrowserBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html') }}',
-            filebrowserImageBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html?type=Images') }}',
-            filebrowserFlashBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html?type=Flash') }}',
-            filebrowserUploadUrl: '{{ asset('assetsckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}',
-            filebrowserImageUploadUrl: '{{ asset('assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}',
-            filebrowserFlashUploadUrl: '{{ asset('assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}',
-
-        });
-
-        CKEDITOR.replace('long_content_nepali', {
-            toolbar: [{
-                    name: 'document',
-                    groups: ['mode', 'document', 'doctools'],
-                    items: ['Source']
-                },
-                {
-                    name: 'basicstyles',
-                    groups: ['basicstyles', 'cleanup'],
-                    items: ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-',
-                        'RemoveFormat'
-                    ]
-                },
-                {
-                    name: 'clipboard',
-                    groups: ['clipboard', 'undo'],
-                    items: ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']
-                },
-                {
-                    name: 'editing',
-                    groups: ['find', 'selection', 'spellchecker'],
-                    items: ['Find', 'Replace', '-', 'SelectAll']
-                },
-                '/',
-                {
-                    name: 'insert',
-                    items: ['Image', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'Iframe']
-                },
-                {
-                    name: 'paragraph',
-                    groups: ['list', 'indent', 'blocks', 'align', 'bidi'],
-                    items: ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-',
-                        'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr',
-                        'BidiRtl'
-                    ]
-                },
-                {
-                    name: 'links',
-                    items: ['Link', 'Unlink', 'Anchor']
-                },
-                '/',
-                {
-                    name: 'styles',
-                    items: ['Styles', 'Format', 'Font', 'FontSize']
-                },
-                {
-                    name: 'colors',
-                    items: ['TextColor', 'BGColor']
-                },
-                {
-                    name: 'tools',
-                    items: ['Maximize']
-                },
-                {
-                    name: 'others',
-                    items: ['-']
-                }
-            ],
-            uiColor: '#3c8dbc',
-            height: '200px',
-            enterMode: CKEDITOR.ENTER_BR,
-            filebrowserWindowWidth: '400',
-            filebrowserWindowHeight: '300',
-            filebrowserBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html') }}',
-            filebrowserImageBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html?type=Images') }}',
-            filebrowserFlashBrowseUrl: '{{ asset('assets/ckfinder/ckfinder.html?type=Flash') }}',
-            filebrowserUploadUrl: '{{ asset('assetsckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files') }}',
-            filebrowserImageUploadUrl: '{{ asset('assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images') }}',
-            filebrowserFlashUploadUrl: '{{ asset('assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash') }}',
-
-        });
-    </script>
     
     <script>
         CKEDITOR.replace('long_content',{
@@ -667,12 +515,12 @@
             enterMode :CKEDITOR.ENTER_BR,
             filebrowserWindowWidth: '400',
             filebrowserWindowHeight: '300',
-             filebrowserBrowseUrl: '{{asset("assets/ckfinder/ckfinder.html")}}',
-            filebrowserImageBrowseUrl : '{{asset("assets/ckfinder/ckfinder.html?type=Images")}}',
-            filebrowserFlashBrowseUrl : '{{asset("assets/ckfinder/ckfinder.html?type=Flash")}}',
-            filebrowserUploadUrl: '{{asset("assetsckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files")}}',
-            filebrowserImageUploadUrl : '{{asset("assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images")}}',
-            filebrowserFlashUploadUrl : '{{asset("assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash")}}',
+             filebrowserBrowseUrl: '{{asset("/dirosha/assets/ckfinder/ckfinder.html")}}',
+            filebrowserImageBrowseUrl : '{{asset("/dirosha/assets/ckfinder/ckfinder.html?type=Images")}}',
+            filebrowserFlashBrowseUrl : '{{asset("/dirosha/assets/ckfinder/ckfinder.html?type=Flash")}}',
+            filebrowserUploadUrl: '{{asset("/dirosha/assetsckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files")}}',
+            filebrowserImageUploadUrl : '{{asset("/dirosha/assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images")}}',
+            filebrowserFlashUploadUrl : '{{asset("/dirosha/assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash")}}',
             
         });
 
@@ -697,12 +545,12 @@
             enterMode :CKEDITOR.ENTER_BR,
             filebrowserWindowWidth: '400',
             filebrowserWindowHeight: '300',
-             filebrowserBrowseUrl: '{{asset("assets/ckfinder/ckfinder.html")}}',
-            filebrowserImageBrowseUrl : '{{asset("assets/ckfinder/ckfinder.html?type=Images")}}',
-            filebrowserFlashBrowseUrl : '{{asset("assets/ckfinder/ckfinder.html?type=Flash")}}',
-            filebrowserUploadUrl: '{{asset("assetsckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files")}}',
-            filebrowserImageUploadUrl : '{{asset("assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images")}}',
-            filebrowserFlashUploadUrl : '{{asset("assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash")}}',
+             filebrowserBrowseUrl: '{{asset("/dirosha/assets/ckfinder/ckfinder.html")}}',
+            filebrowserImageBrowseUrl : '{{asset("/dirosha/assets/ckfinder/ckfinder.html?type=Images")}}',
+            filebrowserFlashBrowseUrl : '{{asset("/dirosha/assets/ckfinder/ckfinder.html?type=Flash")}}',
+            filebrowserUploadUrl: '{{asset("/dirosha/assetsckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files")}}',
+            filebrowserImageUploadUrl : '{{asset("/dirosha/assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images")}}',
+            filebrowserFlashUploadUrl : '{{asset("/dirosha/assets/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash")}}',
             
         });
     </script> 

@@ -113,17 +113,17 @@ class ContactController extends Controller
         
         if($contact){
             Session::flash('contact', 'Thanks for submitting'); 
-            return redirect('/contact');
+            return redirect('/dirosha/contact');
         }
         else{
             Session::flash('contact_error', 'Sorry form submitted failed'); 
-            return redirect('/contact');
+            return redirect('/dirosha/contact');
         }
 
     }
     public function Destroy($slug){
         $contact = Contact::where('nav_name',$slug)->delete();
-        return redirect('/');
+        return redirect('/dirosha/');
     }
 
     public function AppliedJob(){

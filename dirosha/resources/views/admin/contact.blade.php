@@ -1,4 +1,8 @@
 @extends('layouts.master')
+@push('title')
+    Contact us
+@endpush
+
 @section('content')
     <!-- Page Title -->
     <section class="page-title bg-dark-overlay text-center" style="background-image: url(/dirosha/website/images/portfolio.jpg);">
