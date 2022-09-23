@@ -14,7 +14,7 @@
 								<form action="{{route('contactstore')}}" method="POST" class="theme-form-one form-validation" autocomplete="on" enctype='multipart/form-data'>
 									@csrf	
 									<div class="row">
-										<div class="col-sm-6 col-12"><input type="text" placeholder="Name *" name="name" required></div>
+										<col-sm-6 col-12"><input type="text" placeholder="Name *" name="name" required></div>
 										<div class="col-sm-6 col-12"><input type="number" placeholder="Phone *" name="number" required></div>
 										<div class="col-sm-6 col-12"><input type="email" placeholder="Email *" name="email"></div>
                                         <div class="col-sm-6 col-12"><input type="text" placeholder="Applying For *" name="apply_for" value="{{$job_detail->caption ?? ''}}"></div>

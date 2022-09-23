@@ -65,10 +65,10 @@
                                 <th>Number</th>
                                 <th>Email</th>
                                 <th>Message</th>
-                                <th>Resumes</th>
-                                <th>job title</th>
-                                 <th>country</th>
-                                 <th>job detail </th>
+                                {{-- <th>Resumes</th> --}}
+                                <th>Subject</th>
+                                 {{-- <th>country</th>
+                                 <th>job detail </th> --}}
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -82,10 +82,10 @@
                                         <td>{{$contact->number ?? ''}}</td>
                                         <td>{{$contact->email ?? ''}}</td>
                                         <td>{{$contact->message ?? ''}}</td>
-                                        <td><a href="{{$contact->file ?? '#'}}"><button type="button" class="btn btn-danger btn-sm">View</button></td>
+                                        {{-- <td><a href="{{$contact->file ?? '#'}}"><button type="button" class="btn btn-danger btn-sm">View</button></td> --}}
                                         <td>{{$contact->apply_for ?? ''}}</td>
-                                        <td>{{$contact->country ?? ''}}</td>
-                                        <td>{{$contact->job_id}}</td><!----job deytail-->
+                                        {{-- <td>{{$contact->country ?? ''}}</td>
+                                        <td>{{$contact->job_id}}</td> --}}
                                        <td><a href="{{route('contactDelete',$contact->id)}}"><button type="button" class="btn btn-danger btn-sm">Delete</button></td>
                                     </tr>
                                     @endforeach
