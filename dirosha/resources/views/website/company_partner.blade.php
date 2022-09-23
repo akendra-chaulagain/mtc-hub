@@ -32,7 +32,7 @@ if (
                         @foreach ($partners as $partner)
 						<div class="col-sm-2">
 							<a href="#">
-								<img src="{{ $partner->banner_image }}" alt="">
+								<img src="/dirosha/{{ $partner->banner_image }}" alt="">
 							</a>
 						</div>
                          @endforeach

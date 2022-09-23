@@ -29,7 +29,7 @@ $products = App\Models\Navigation::find($project_heading->parent_page_id);
                     <h1 class="page-title__title">Our Project</h1>
                     <ul class="breadcrumbs">
                         <li class="breadcrumbs__item">
-                            <a href="/" class="breadcrumbs__url">Home</a>
+                            <a href="/dirosha/" class="breadcrumbs__url">Home</a>
                         </li>
                         <li class="breadcrumbs__item breadcrumbs__item--current">
                             Our Project
@@ -61,7 +61,7 @@ $products = App\Models\Navigation::find($project_heading->parent_page_id);
                                 <div class="project__container">
                                     <div class="project__img-holder">
                                         <a href="{{ route('single_news', $products_datatem->nav_name) }}">
-                                            <img src="{{ $products_datatem->banner_image }}" alt=""
+                                            <img src="/dirosha/{{ $products_datatem->banner_image }}" alt=""
                                                 class="project__img">
                                             <div class="hover-overlay">
                                                 <div class="project__description">
