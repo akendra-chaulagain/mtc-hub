@@ -31,10 +31,15 @@
                             <a href="/dirosha/" class="breadcrumbs__url">Home</a>
                         </li>
 
-
-                         <li class="breadcrumbs__item">
+                        @if ($normal->page_type == 'News')
+                            <li class="breadcrumbs__item">
                             <a href="/dirosha/news&events" class="breadcrumbs__url">News &  Events</a>
-                        </li>
+                        </li> 
+                        @else
+                            
+                        @endif
+
+                        
 
 
 

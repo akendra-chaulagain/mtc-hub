@@ -33,7 +33,7 @@
           </div>
           <div class="row justify-content-center text-center">
               <div class="col-lg-5">
-                  <a class="main-btn main-btn-2" href="/news&events">View All</a>
+                  <a class="main-btn main-btn-2" href="/dirosha/news&events">View All</a>
               </div>
           </div>
       </div>
