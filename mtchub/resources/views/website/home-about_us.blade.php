@@ -15,7 +15,7 @@
                                 <h3 class="title">{{ $about->caption ?? '' }}</h3>
                                 <p>{!! $about->short_content ?? '' !!}</p>
                                 <p>{!! $about->long_content ?? '' !!}</p>
-                                <a class="main-btn main-btn-2" href="/about-us">Read More</a>
+                                <a class="main-btn main-btn-2" href="/mtchub/about-us">Read More</a>
                             </div>
                         </div>
                         <div class="col-lg-5">
