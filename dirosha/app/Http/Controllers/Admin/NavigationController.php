@@ -64,39 +64,39 @@ class NavigationController extends Controller
         if($request->hasFile('icon_image')){
             $img_file = $request->file('icon_image');
             $data['icon_image'] = time().'_'.$img_file->getClientOriginalName();
-            $destinationPath = public_path('uploads/icon_image');
+            $destinationPath = public_path('/dirosha/uploads/icon_image');
             $img_file->move($destinationPath,$data['icon_image']);
         }
         if($request->hasFile('featured_image')){
             $img_file = $request->file('featured_image');
             $data['featured_image'] = time().'_'.$img_file->getClientOriginalName();
-            $destinationPath = public_path('uploads/featured_image');
+            $destinationPath = public_path('/dirosha/uploads/featured_image');
             $img_file->move($destinationPath,$data['featured_image']);
         }
 
         if($request->hasFile('banner_image')){
             $banner_file = $request->file('banner_image');
-            $data['banner_image'] = "/uploads/banner_image/".time().'_'.$banner_file->getClientOriginalName();
-            $destinationPath = public_path('uploads/banner_image');
+            $data['banner_image'] = "//dirosha/uploads/banner_image/".time().'_'.$banner_file->getClientOriginalName();
+            $destinationPath = public_path('/dirosha/uploads/banner_image');
             $banner_file->move($destinationPath,$data['banner_image']);
         }
 
         if($request->hasFile('attachment')){
             $attachment_file = $request->file('attachment');
             $data['attachment'] = time().'_'.$attachment_file->getClientOriginalName();
-            $destinationPath = public_path('uploads/attachment');
+            $destinationPath = public_path('/dirosha/uploads/attachment');
             $attachment_file->move($destinationPath,$data['attachment']);
         }
 
         if($request->hasFile('main_attachment')){
             $attachment_file = $request->file('main_attachment');
             $data['main_attachment'] = time().'_'.$attachment_file->getClientOriginalName();
-            $destinationPath = public_path('uploads/main_attachment');
+            $destinationPath = public_path('/dirosha/uploads/main_attachment');
             $attachment_file->move($destinationPath,$data['main_attachment']);
         }
 
         $navigation = Navigation::create($data);
-        return redirect('admin/navigation-list/'.$nav_category.$parent_id)->with('success','Data Added Succssfully!!');
+        return redirect('/dirosha/admin/navigation-list/'.$nav_category.$parent_id)->with('success','Data Added Succssfully!!');
 
     }
 
@@ -134,22 +134,22 @@ class NavigationController extends Controller
         $parent_id = (intval($navigation->parent_page_id) == 0)?'':'/'.intval($navigation->parent_page_id);
 
         if($request->hasFile('icon_image')){
-            if(file_exists(public_path('uploads/icon_image').'/'.$navigation->icon_image)){
-                File::delete('uploads/icon_image/'.$navigation->icon_image);
+            if(file_exists(public_path('/dirosha/uploads/icon_image').'/'.$navigation->icon_image)){
+                File::delete('/dirosha/uploads/icon_image/'.$navigation->icon_image);
             }
             $icon_image = $request->file('icon_image');
             $data['icon_image'] = time().'_'.$icon_image->getClientOriginalName();
-            $destinationPath = public_path('uploads/icon_image');
+            $destinationPath = public_path('/dirosha/uploads/icon_image');
             $icon_image->move($destinationPath,$data['icon_image']);
         }
 
         if($request->hasFile('featured_image')){
-            if(file_exists(public_path('uploads/featured_image').'/'.$navigation->icon_image)){
-                File::delete('uploads/featured_image/'.$navigation->icon_image);
+            if(file_exists(public_path('/dirosha/uploads/featured_image').'/'.$navigation->icon_image)){
+                File::delete('/dirosha/uploads/featured_image/'.$navigation->icon_image);
             }
             $icon_image = $request->file('featured_image');
             $data['featured_image'] = time().'_'.$icon_image->getClientOriginalName();
-            $destinationPath = public_path('uploads/featured_image');
+            $destinationPath = public_path('/dirosha/uploads/featured_image');
             $icon_image->move($destinationPath,$data['featured_image']);
         }
 
@@ -158,30 +158,30 @@ class NavigationController extends Controller
                 File::delete($navigation->banner_image);
             }
             $banner_image = $request->file('banner_image');
-            $data['banner_image'] = "/uploads/banner_image/".time().'_'.$banner_image->getClientOriginalName();
-            $destinationPath = public_path('uploads/banner_image');
+            $data['banner_image'] = "//dirosha/uploads/banner_image/".time().'_'.$banner_image->getClientOriginalName();
+            $destinationPath = public_path('/dirosha/uploads/banner_image');
             $banner_image->move($destinationPath,$data['banner_image']);
         }
         
         if($request->hasFile('attachment')){
-            if(file_exists(public_path('uploads/attachment').'/'.$navigation->attachment)){
-                File::delete('uploads/attachment/'.$navigation->attachment);
+            if(file_exists(public_path('/dirosha/uploads/attachment').'/'.$navigation->attachment)){
+                File::delete('/dirosha/uploads/attachment/'.$navigation->attachment);
             }
 
             $attachment_file = $request->file('attachment');
             $data['attachment'] = time().'_'.$attachment_file->getClientOriginalName();
-            $destinationPath = public_path('uploads/attachment');
+            $destinationPath = public_path('/dirosha/uploads/attachment');
             $attachment_file->move($destinationPath,$data['attachment']);
         }
 
         if($request->hasFile('main_attachment')){
-            if(file_exists(public_path('uploads/main_attachment').'/'.$navigation->attachment)){
-                File::delete('uploads/main_attachment/'.$navigation->attachment);
+            if(file_exists(public_path('/dirosha/uploads/main_attachment').'/'.$navigation->attachment)){
+                File::delete('/dirosha/uploads/main_attachment/'.$navigation->attachment);
             }
 
             $attachment_file = $request->file('main_attachment');
             $data['main_attachment'] = time().'_'.$attachment_file->getClientOriginalName();
-            $destinationPath = public_path('uploads/main_attachment');
+            $destinationPath = public_path('/dirosha/uploads/main_attachment');
             $attachment_file->move($destinationPath,$data['main_attachment']);
         }
 
@@ -189,7 +189,7 @@ class NavigationController extends Controller
 
         $navigationItems = NavigationItems::all();
         NavigationItems::where('navigation_id',$id)->update(['navigation_id'=>$id]);
-        return redirect('/admin/navigation-list/'.$nav_category . $parent_id )->with('success','Data Updated Successfully!!');
+        return redirect('/dirosha/admin/navigation-list/'.$nav_category . $parent_id )->with('success','Data Updated Successfully!!');
         
 
     }
@@ -205,24 +205,24 @@ class NavigationController extends Controller
         $navigation = Navigation::find($id);
         $parent_id = (intval($navigation->parent_page_id) == 0)?'':'/'.intval($navigation->parent_page_id);
 
-        if(file_exists(public_path('uploads/icon_image/'.$navigation->icon_image))){
-            File::delete(public_path('uploads/icon_image/'.$navigation->icon_image));
+        if(file_exists(public_path('/dirosha/uploads/icon_image/'.$navigation->icon_image))){
+            File::delete(public_path('/dirosha/uploads/icon_image/'.$navigation->icon_image));
         }
 
-        if(file_exists(public_path('uploads/featured_image/'.$navigation->featured_image))){
-            File::delete(public_path('uploads/featured_image/'.$navigation->featured_image));
+        if(file_exists(public_path('/dirosha/uploads/featured_image/'.$navigation->featured_image))){
+            File::delete(public_path('/dirosha/uploads/featured_image/'.$navigation->featured_image));
         }
 
         if(file_exists(public_path($navigation->banner_image))){
             File::delete(public_path($navigation->banner_image));
         }
         
-        if(file_exists(public_path('uploads/attachment/'.$navigation->attachment))){
-            File::delete(public_path('uploads/attachment/'.$navigation->attachment));
+        if(file_exists(public_path('/dirosha/uploads/attachment/'.$navigation->attachment))){
+            File::delete(public_path('/dirosha/uploads/attachment/'.$navigation->attachment));
         }
 
-        if(file_exists(public_path('uploads/main_attachment/'.$navigation->main_attachment))){
-            File::delete(public_path('uploads/main_attachment/'.$navigation->main_attachment));
+        if(file_exists(public_path('/dirosha/uploads/main_attachment/'.$navigation->main_attachment))){
+            File::delete(public_path('/dirosha/uploads/main_attachment/'.$navigation->main_attachment));
         }
 
 
@@ -233,14 +233,14 @@ class NavigationController extends Controller
                 $job->delete();
             }            
 
-        return redirect('admin/navigation-list/'.$nav_category.$parent_id)->with('success','Data Deleted Succssfully!!');
+        return redirect('/dirosha/admin/navigation-list/'.$nav_category.$parent_id)->with('success','Data Deleted Succssfully!!');
     }
     
     public function deleteIconImage($nav_category,$id)
     {
         $icons = Navigation::where('id',$id)->where('icon_image','like','%_%')->first();
         $image = $icons->icon_image;
-        File::delete(public_path('uploads/icon_image/'.$image));
+        File::delete(public_path('/dirosha/uploads/icon_image/'.$image));
         $icons->update(['icon_image'=>null]);
         return redirect()->back();
     }
@@ -249,7 +249,7 @@ class NavigationController extends Controller
     {
         $icons = Navigation::where('id',$id)->where('featured_image','like','%_%')->first();
         $image = $icons->featured_image;
-        File::delete(public_path('uploads/featured_image/'.$image));
+        File::delete(public_path('/dirosha/uploads/featured_image/'.$image));
         $icons->update(['featured_image'=>null]);
         return redirect()->back();
     }
@@ -267,7 +267,7 @@ class NavigationController extends Controller
     {
         $mainattachment = Navigation::where('id',$id)->where('main_attachment','like','%_%')->first();
         $image = $mainattachment->main_attachment;
-        File::delete(public_path('uploads/main_attachment/'.$image));
+        File::delete(public_path('/dirosha/uploads/main_attachment/'.$image));
         $mainattachment->update(['main_attachment'=>null]);
         return redirect()->back();
     }
@@ -276,7 +276,7 @@ class NavigationController extends Controller
     {
         $attachment = Navigation::where('id',$id)->where('attachment','like','%_%')->first();
         $image = $attachment->attachment;
-        File::delete(public_path('uploads/attachment/'.$image));
+        File::delete(public_path('/dirosha/uploads/attachment/'.$image));
         $attachment->update(['attachment'=>null]);
         return redirect()->back();
     }
@@ -325,7 +325,7 @@ class NavigationController extends Controller
         foreach($files as $index=>$image)
         {
             $filename = time().'_'.$image->getClientOriginalName();
-            $destinationPath = public_path('uploads/photo_gallery');
+            $destinationPath = public_path('/dirosha/uploads/photo_gallery');
             $image->move($destinationPath, $filename);
             NavigationItems::create([
                             'navigation_id'=>$request->id,
@@ -340,7 +340,7 @@ class NavigationController extends Controller
          }
        }
 
-       return redirect('admin/navigation-list/'.$data['nav_category']. $parent_id."/showList")->with('success','Media Added Successfully!!');
+       return redirect('/dirosha/admin/navigation-list/'.$data['nav_category']. $parent_id."/showList")->with('success','Media Added Successfully!!');
 
     }
 
@@ -354,14 +354,14 @@ class NavigationController extends Controller
        $media = NavigationItems::find($id);
 
        if($request->hasFile('file')){
-        if(file_exists(public_path('uploads/photo_gallery').'/'.$media->file)){
-            unlink('uploads/photo_gallery/'.$media->file);
+        if(file_exists(public_path('/dirosha/uploads/photo_gallery').'/'.$media->file)){
+            unlink('/dirosha/uploads/photo_gallery/'.$media->file);
 
         }
         
         $filename = $request->file('file');
         $data['file'] = time().'_'.$request->file('file')->getClientOriginalName();
-        $destinationPath = public_path('uploads/photo_gallery');
+        $destinationPath = public_path('/dirosha/uploads/photo_gallery');
         $filename->move($destinationPath,$data['file']);
        }
      

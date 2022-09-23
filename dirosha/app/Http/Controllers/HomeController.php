@@ -314,7 +314,7 @@ class HomeController extends Controller
         } else {
 
 
-            return redirect('/');
+            return redirect('/dirosha/');
         }
     }
 
@@ -426,7 +426,7 @@ class HomeController extends Controller
 
                     return view("website.courses-details")->with(['partners' => $partners, 'photos' => $photos, 'jobs' => $jobs, 'menus' => $menus, 'sliders' => $sliders, 'about' => $About, 'global_setting' => $global_setting, 'slug_detail' => $slug_detail, 'information_detail' => $information_detail]);
                 } else {
-                    return redirect('/');
+                    return redirect('/dirosha/');
                 }
             }
         } else {
@@ -476,7 +476,7 @@ class HomeController extends Controller
             // return $notice_heading;
             return view("website.inner")->with(["partners" => $partners, 'normal' => $normal, 'notice_heading' => $notice_heading, 'jobs' => $jobs, 'menus' => $menus, 'sliders' => $sliders, 'about' => $About, 'global_setting' => $global_setting, 'slug_detail' => $slug_detail]);
         } else {
-            return redirect("/");
+            return redirect("/dirosha/");
         }
     }
 
