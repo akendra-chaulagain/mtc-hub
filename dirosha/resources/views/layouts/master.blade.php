@@ -161,7 +161,7 @@ if (isset($normal)) {
 
 
                                 <li>
-                                    <a href="/dirosha/contact">Contact Us</a>
+                                    <a href="/dirosha/contact">Contact us</a>
                                 </li>
                             </ul> <!-- end menu -->
                             <div class="nav__phone nav__phone--mobile d-lg-none">
@@ -248,7 +248,7 @@ if (isset($normal)) {
                         <div class="col-lg-3 col-md-3">
                             <div class="widget widget-about-us">
                                 <!-- Logo -->
-                                <a href="index.html" class="logo-container flex-child">
+                                <a href="/dirosha/" class="logo-container flex-child">
                                     <img class="logo" src={{ '/dirosha/uploads/icons/' . $global_setting->site_logo }} alt="logo">
                                 </a>
                             </div>
