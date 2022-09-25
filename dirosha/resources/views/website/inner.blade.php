@@ -85,16 +85,7 @@
                         <h4>{!! $normal->short_content !!}</h4>
                         <p>{!! $normal->long_content !!}</p>
                         <div class="gallery gallery-size-large">
-                            <figure class="gallery-item">
-                                <div class="gallery-icon landscape">
-                                    <img src="/dirosha/images/service-1.jpg" class="attachment-large size-large" alt="">
-                                </div>
-                            </figure>
-                            <figure class="gallery-item">
-                                <div class="gallery-icon landscape">
-                                    <img src="/dirosha/images/service-2.jpg" class="attachment-large size-large" alt="">
-                                </div>
-                            </figure>
+                            
                         </div>
                     </div>
 

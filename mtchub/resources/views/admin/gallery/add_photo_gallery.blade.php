@@ -38,7 +38,7 @@
 
         <div class="box-body">
         <!-- form start -->
-        <form method="post" action="/admin/navigation-list/{{$category}}/{{$id}}/addAlbum" enctype="multipart/form-data">
+        <form method="post" action="/mtchub/admin/navigation-list/{{$category}}/{{$id}}/addAlbum" enctype="multipart/form-data">
             {{csrf_field()}}
                     <div class="col-sm-12 ">
                     <table class="table" width="100%">

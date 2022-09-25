@@ -45,9 +45,7 @@ $galleryFeed = App\Models\Navigation::find($normal->parent_page_id);
         </div>
     </div>
 
-    <!--====== PAGE TITLE PART ENDS ======-->
 
-    <!--====== GALLERY PART START ======-->
 
     <section class="gallery-area gallery-page">
         <div class="container">

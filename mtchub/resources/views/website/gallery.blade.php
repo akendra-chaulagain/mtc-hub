@@ -29,7 +29,7 @@
 
     <!--====== PAGE TITLE PART ENDS ======-->
 
-    <!--====== BLOG DETAILS PART ENDS ======-->
+
 
     <section class="gallery-folder">
         <div class="container">

@@ -27,7 +27,7 @@
         </div>
     </div>
 
-   
+
 
     <section class="gallery-folder">
         <div class="container">
