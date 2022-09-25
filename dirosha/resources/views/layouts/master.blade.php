@@ -257,12 +257,11 @@ if (isset($normal)) {
                         <div class="col-lg-2 col-md-3">
                             <div class="widget widget_nav_menu">
                                 <ul>
-                                    <li> <a href="/dirosha/">Home</a>
+                                    <li> <a href="/dirosha/">Home</a> </li>
 
-                                <li> <a href="/dirosha/About-us">Video Galery</a>
 
                                
-                                <li> <a href="/dirosha/news&events">News & Events</a>
+                                <li> <a href="/dirosha/news&events">News & Events</a></li>
                                
                             </ul>
                         </div>
@@ -273,7 +272,7 @@ if (isset($normal)) {
                             <ul>
                                 <li> <a href="/dirosha/gallery/photo-gallery">Image Gallery</a>
 
-                                <li> <a href="/dirosha/gallery/video-gallery">Video Galery</a>
+                                <li> <a href="/dirosha/gallery/video-gallery">Video Gallery</a>
 
                                
                                 <li> <a href="/dirosha/contact">Contact</a>
