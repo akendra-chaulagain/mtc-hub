@@ -44,7 +44,6 @@
 
         </div>
         <!-- form start -->
-        
         <form method="post" action="/dirosha/admin/navigation-list/{{$category}}"  enctype="multipart/form-data">
             {{csrf_field()}}
             <div class="col-md-9" style="padding-top: 10px;">

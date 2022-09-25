@@ -22,13 +22,13 @@ class NavigationController extends Controller
     {         
         $main_home = $category;//customized by md to redirect for job add page  
         //return $main_home;       
-        $request_segment = \Request::segment(4);//customized by md to redirect for job add page
-        $category_id = \Request::segment(4);
+        $request_segment = \Request::segment(5);//customized by md to redirect for job add page
+        $category_id = \Request::segment(5);
         if(intval($request_segment) == 0){
-            $request_segment = \Request::segment(3);
+            $request_segment = \Request::segment(4);
             $current_max_position = Navigation::where('nav_category',$request_segment)->max('position');
         }else{
-            $category_id = \Request::segment(4);
+            $category_id = \Request::segment(5);
             //return $category_id;
             $current_max_position = Navigation::where('parent_page_id',$request_segment)->max('position');
             $category .= '/'.$request_segment;
@@ -56,7 +56,7 @@ class NavigationController extends Controller
 
         $data = $request->all();
         $data['nav_category'] = $nav_category;
-        $request_segment = \Request::segment(4);
+        $request_segment = \Request::segment(5);
         $parent_id = intval($request_segment);
         $data['parent_page_id'] = $parent_id;
         $parent_id = ($parent_id == '')?'':'/'.$parent_id;
@@ -304,6 +304,7 @@ class NavigationController extends Controller
         $this->validate($request,[
             'pg_file'=>'required'
         ]);
+        return request;
        $data = $request->all();
        $data['nav_category'] = $nav_category;
 
