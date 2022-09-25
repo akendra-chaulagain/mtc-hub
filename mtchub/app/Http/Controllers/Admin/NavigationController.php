@@ -31,7 +31,7 @@ class NavigationController extends Controller
             $category_id = \Request::segment(5);
             //return $category_id;
             $current_max_position = Navigation::where('parent_page_id', $request_segment)->max('position');
-            $category .= '/mtchub/' . $request_segment;
+            $category .= '/' . $request_segment;
         }
         $category_id = intval($category_id);
         //return $category_id;
