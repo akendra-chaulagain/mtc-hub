@@ -59,8 +59,8 @@
                     <div class="row">
                         <div class="col-lg-10">
                             <div class="entry__article">
-                                <p>{{ $normal->short_content }}</p>
-                                <p>{{ $normal->long_content }}</p>
+                                <p>{!! $normal->short_content !!}</p>
+                                <p>{!! $normal->long_content !!}</p>
                                 
                             </div>
                         </div>
