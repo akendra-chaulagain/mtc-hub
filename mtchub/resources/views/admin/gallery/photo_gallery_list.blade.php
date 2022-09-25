@@ -55,10 +55,10 @@
       <tbody>
         @foreach($medias as $index => $media)
           <tr>
-            <form action="/mtchub/admin/navigation-list/media/{{$media->id}}/update" method="POST" enctype="multipart/form-data">
+            <form action="/admin/navigation-list/media/{{$media->id}}/update" method="POST" enctype="multipart/form-data">
                 {{csrf_field()}}
               <td>{{$index+1}}<br>
-                  <img src="{{asset('/mtchub/public/uploads/photo_gallery/'.$media->file)}}" alt="" height="50" width="80">
+                  <img src="{{asset('public/uploads/photo_gallery/'.$media->file)}}" alt="" height="50" width="80">
               </td>
               <td>
                 <input type="text" value="{{$media->name}}" placeholder="Name" name="name" class="form-control">
@@ -73,13 +73,13 @@
               </td>
 
               <td class="text-right">  
-                <a href="/mtchub/admin/navigation-list/media/{$media->id}/update" title="" class="">
+                <a href="/admin/navigation-list/media/{$media->id}/update" title="" class="">
                     <button type="submit" class="btn btn-primary">Update</button></a>
 
               </td>
             </form>
             <td class="text-left">
-                <a href="/mtchub/admin/navigation-list/media/{{$media->id}}/delete" title="" class="" onclick="return confirm('Are you sure you want to delete??')"><button class="btn btn-danger">Delete</button></a>
+                <a href="/admin/navigation-list/media/{{$media->id}}/delete" title="" class="" onclick="return confirm('Are you sure you want to delete??')"><button class="btn btn-danger">Delete</button></a>
                 </td>
 
           </tr>
