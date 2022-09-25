@@ -308,7 +308,7 @@ class NavigationController extends Controller
         $data = $request->all();
         $data['nav_category'] = $nav_category;
 
-        $request_segment = \Request::segment(4);
+        $request_segment = \Request::segment(5);
         $parent_id = intval($request_segment);
         $data['parent_page_id'] = $parent_id;
         $parent_id = ($parent_id == '') ? '' : '/' . $parent_id;
