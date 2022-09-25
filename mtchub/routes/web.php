@@ -42,7 +42,7 @@ Route::prefix('/mtchub/admin')->group(function(){
 
     //photo gallery
     Route::get('/navigation-list/{category}/{id}/showList', 'Admin\NavigationController@showMediaList');
-    Route::get('/navigation-list/{category}/{id}/showList/create', 'Admin\NavigationController@addMedia');
+    Route::post('/navigation-list/{category}/{id}/showList/create', 'Admin\NavigationController@addMedia');
     Route::post('/navigation-list/{category}/{id}/addAlbum', 'Admin\NavigationController@storeAlbum');
     Route::get('/navigation-list/media/{id}/delete', 'Admin\NavigationController@deleteMedia');
     Route::post('/navigation-list/media/{id}/update', 'Admin\NavigationController@updateMedia');
