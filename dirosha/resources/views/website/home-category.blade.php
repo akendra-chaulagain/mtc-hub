@@ -28,7 +28,7 @@ $products_data = App\Models\Navigation::find($products->parent_page_id);
             @foreach ($products_data->childs as $project_headingitem)
                 @foreach ($project_headingitem->childs as $products_datatem)
                     <div
-                        class="masonry-item col-xl-3 col-lg-4 col-md-6 project hover-trigger  {{ $project_headingitem->nav_name }}">
+                        class="masonry-item col-xl-4 col-lg-4 col-md-6 project hover-trigger  {{ $project_headingitem->nav_name }}">
                         <div class="project__container">
                             <div class="project__img-holder">
                                 <a href="{{ route('single_news', $products_datatem->nav_name) }}">
