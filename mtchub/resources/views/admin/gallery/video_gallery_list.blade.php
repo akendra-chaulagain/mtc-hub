@@ -59,7 +59,7 @@
                             <tbody>
                                 @foreach ($links as $index => $link)
                                     <tr>
-                                        <form action="/admin/navigation-list/vlink/{{ $link->id }}/update"
+                                        <form action="/mtchub/admin/navigation-list/vlink/{{ $link->id }}/update"
                                             method="POST" enctype="multipart/form-data">
                                             {{ csrf_field() }}
                                             <td>{{ $index + 1 }}</td>
@@ -86,7 +86,7 @@
                                             </td>
                                         </form>
                                         <td class="text-left">
-                                            <a href="/admin/navigation-list/vlink/{{ $link->id }}/delete"
+                                            <a href="/mtchub/admin/navigation-list/vlink/{{ $link->id }}/delete"
                                                 title="" class=""
                                                 onclick="return confirm('Are you sure you want to delete??')"><button
                                                     class="btn btn-danger">Delete</button></a>
