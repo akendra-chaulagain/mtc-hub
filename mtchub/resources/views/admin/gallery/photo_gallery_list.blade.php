@@ -55,7 +55,7 @@
       <tbody>
         @foreach($medias as $index => $media)
           <tr>
-            <form action="/mtchub/admin/navigation-list/media/{{$media->id}}/update" method="POST" enctype="multipart/form-data">
+            <form method="post"  action="/mtchub/admin/navigation-list/media/{{$media->id}}/update" enctype="multipart/form-data">
                 {{csrf_field()}}
               <td>{{$index+1}}<br>
                   <img src="{{asset('/mtchub/public/uploads/photo_gallery/'.$media->file)}}" alt="" height="50" width="80">
