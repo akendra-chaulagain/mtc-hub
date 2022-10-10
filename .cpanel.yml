@@ -3,4 +3,3 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home1/demoradiantnepal/mtc.demo.radiantnepal.com/
     - /bin/cp -r * $DEPLOYPATH
-
